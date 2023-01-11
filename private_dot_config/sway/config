@@ -80,7 +80,6 @@ exec_always  --no-startup-id  nm-applet --indicator &
 exec_always  --no-startup-id  syncthing &
 exec_always  --no-startup-id  autotiling-rs &
 exec_always  --no-startup-id  ~/.config/waybar/launch_waybar.sh &
-exec  --no-startup-id  dwall -s catalina 
 
 set $gnome-schema org.gnome.desktop.interface
 seat seat0 xcursor_theme Catppuccin-Mocha-Dark-Cursors 18
