@@ -1,0 +1,90 @@
+@define-color bg #161320;
+@define-color bg-hover #1E1E2E;
+@define-color blue #96CDFB;
+@define-color sky #89DCEB;
+@define-color red #F28FAD;
+@define-color pink #F5C2E7;
+@define-color lavender #C9CBFF;
+@define-color rosewater #F5E0DC;
+@define-color flamingo #F2CDCD;
+@define-color fg #D9E0EE;
+@define-color green #ABE9B3;
+@define-color dark-fg #161320;
+@define-color peach #F8BD96;
+@define-color border @blue;
+@define-color gray2 #6E6C7E;
+@define-color black4 #575268;
+@define-color black3 #302D41;
+@define-color maroon #E8A2AF;
+
+#window {
+  margin: 0px;
+  border: 2px solid @border;
+  border-radius: 7px;
+  background-color: @bg;
+  font-family: "Iosevka Aile";
+  font-size: 16px;
+  background: rgb(30,30,46);
+  background: linear-gradient(90deg, rgba(30,30,46,1) 26%, rgba(26,24,38,1) 55%, rgba(22,19,32,1) 91%); 
+}
+
+#input {
+  margin: 15px;
+  border: 2px solid @flamingo;
+  border-radius: 10px;
+  color: @lavender;
+  background: rgb(30,30,46);
+  background: linear-gradient(90deg, rgba(30,30,46,1) 43%, rgba(26,24,38,1) 82%, rgba(22,19,32,1) 91%); 
+}
+
+#input:focus {
+  background: rgb(48,45,65);
+  background: linear-gradient(90deg, rgba(48,45,65,1) 19%, rgba(30,30,46,1) 77%, rgba(26,24,38,1) 100%); 
+}
+
+#input:focus image {
+  color: @flamingo;
+}
+
+#input image {
+	color: @lavender;
+}
+
+#inner-box {
+  margin: 5px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 7px;
+  background-color: inherit;
+}
+
+#outer-box {
+  margin: 5px;
+  border: none;
+  background-color: inherit;
+  border-radius: 7px;
+}
+
+#scroll {
+  margin: 0px;
+  border: none;
+}
+
+#text {
+  margin: 5px;
+  border: none;
+  color: @fg;
+} 
+
+#entry:selected {
+	border-radius: 10px;
+ background: rgb(201,203,255);
+background: linear-gradient(90deg, rgba(201,203,255,1) 28%, rgba(245,224,220,1) 85%, rgba(242,205,205,1) 100%); 
+}
+
+#text:selected {
+	background-color: inherit;
+	color: @dark-fg;
+	font-weight: normal;
+}
