@@ -7,7 +7,7 @@ font pango: FireCode Nerd Font Regular 5px
 
 default_border pixel 1
 gaps inner  0
-gaps outer  30
+gaps outer  25
 smart_borders on
 # smart_gaps on
 
