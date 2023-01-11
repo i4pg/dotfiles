@@ -4,26 +4,29 @@
     "sway/workspaces",
     "custom/scratchpad-indicator",
     "temperature",
+    "pulseaudio",
     "idle_inhibitor",
     "mpd",
     "custom/cava-internal",
+    "sway/mode",
   ],
+    "sway/mode": {
+        "format": " {}"
+    },
   "modules-center": [
     "custom/weather",
     "clock",
   ],
   "modules-right": [
+    "backlight",
     "custom/pacman",
     "disk",
-    "pulseaudio",
-    "backlight",
     "memory",
     "cpu",
     /* "network", */
     "battery",
     "tray",
     /* "custom/recording", */
-    "sway/language",
     "custom/powermenu",
   ],
   "custom/launcher": {

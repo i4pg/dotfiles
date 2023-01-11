@@ -1,19 +1,20 @@
+@import "./themes/colors-waybar.css";
 @import "themes/mocha.css";
 
 /* Global */
 * {
   font-family: "FiraCode Nerd Font";
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   border-radius: 1rem;
   transition-property: background-color;
   transition-duration: 0.5s;
-  background-color: @base;
+  background-color: @background;
 }
 
 @keyframes blink_red {
   to {
-    background-color: @red;
-    color: @base;
+    background-color: @color8;
+    color: @background;
   }
 }
 
@@ -47,7 +48,8 @@ window > box {
 
 /* Workspaces */
 #workspaces:hover {
-  background-color: @green;
+  /* background-color: @color11; */
+  background-color: @color15;
   border: none;
 }
 
@@ -56,38 +58,44 @@ window > box {
   padding-left: .4rem;
   padding-top: .1rem;
   padding-bottom: .1rem;
-  color: @green;
+  /* color: @color11; */
+  color: @color15;
   border: .2px solid transparent;
   background: transparent;
 }
 
 #workspaces button.focused {
-  color: @peach;
+  /* color: @color12; */
+  color: @color13;
 }
 
 #workspaces button:hover {
   border: .2px solid transparent;
-  color: @sky;
+  /* color: @color7; */
+  color: @color14;
 }
 
 /* Tooltip */
 tooltip {
-  background: @crust;
+  /* background: @crust; */
+  background: @color0;
 }
 
 tooltip label {
-  color: @text;
+  /* color: @text; */
+  color: @foreground;
 }
 
 /* battery */
 #battery {
-  color: @green;
+  color: @color11;
+  color: @color11;
 }
 #battery.charging, #battery.full, #battery.discharging {
-  color: @yellow;
+  color: @color5;
 }
 #battery.critical:not(.charging) {
-  color: @red;
+  color: @color8;
 }
 #custom-powermenu {
   color: @red;
@@ -95,60 +103,61 @@ tooltip label {
 
 /* mpd */
 #mpd.paused {
-  color: @lavender;
+  color: @color15;
   font-style: italic;
 }
 #mpd.stopped {
+  color: @color15;
   /* background: transparent; */
 }
 #mpd {
-  color: @peach;
+  color: @color12;
 }
 
 /* Extra */
 #custom-cava-internal{
-  color: @teal;
+  color: @color6;
   padding-right: 1rem;
 }
 #custom-launcher {
-  color: @blue;
+  color: @color2;
 }
 #memory {
-  color: @maroon;
+  color: @color3;
 }
 #cpu {
-  color: @flamingo;
+  color: @color4;
 }
 #clock {
-  color: @sky;
+  color: @color7;
 }
 #idle_inhibitor {
-  color: @mauve;
+  color: @color9;
 }
 #temperature {
-  color: @pink;
+  color: @color5;
 }
 #backlight {
-  color: @rosewater;
+  color: @color10;
 }
 #pulseaudio {
-  color: @teal;
+  color: @color6;
 }
 #network {
-  color: @sky;
+  color: @color7;
 }
 #network.disconnected {
-  color: @red;
+  color: @color8;
 }
 #disk {
-  color: @mauve;
+  color: @color9;
 }
 #custom-pacman{
-  color: @peach;
+  color: @color12;
 }
 #custom-scratchpad-indicator {
-  color: @green
+  color: @color11
 }
 #custom-weather {
-  color: @rosewater;
+  color: @color10;
 }

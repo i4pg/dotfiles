@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "catppuccin-mocha"
+lvim.colorscheme = "base16-tokyo-city-dark"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -296,6 +296,7 @@ lvim.plugins = {
       })
     end,
   },
+  { 'dylanaraps/wal.vim' },
 }
 
 -- markdown-preview
