@@ -49,7 +49,7 @@ window > box {
 /* Workspaces */
 #workspaces:hover {
   /* background-color: @color11; */
-  background-color: @color15;
+  background-color: @color14;
   border: none;
 }
 
