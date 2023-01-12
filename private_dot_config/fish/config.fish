@@ -360,6 +360,7 @@ alias vway="chezmoi edit ~/.config/waybar/config2"
 alias vfish="chezmoi edit ~/.config/fish/config.fish"
 alias vwofi="chezmoi edit ~/.config/wofi/config"
 alias vlvim="chezmoi edit ~/.config/lvim/config.lua"
+alias vkitty="chezmoi edit ~/.config/kitty/kitty.conf"
 
 # chezmoi
 alias chezapply="chezmoi apply -v"
