@@ -366,7 +366,7 @@ alias vkitty="chezmoi edit ~/.config/kitty/kitty.conf"
 alias chezapply="chezmoi apply -v"
 
 # ExifTool
-alias exiftool="/usr/bin/vendor_perl/exiftool"
+alias exiftool="exiv2"
 
 ### DTOS ###
 # Copy/paste all content of /etc/dtos over to home folder. A backup of config is created. (Be careful running this!)
