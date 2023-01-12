@@ -361,6 +361,9 @@ alias vfish="chezmoi edit ~/.config/fish/config.fish"
 alias vwofi="chezmoi edit ~/.config/wofi/config"
 alias vlvim="chezmoi edit ~/.config/lvim/config.lua"
 
+# chezmoi
+alias chezapply="chezmoi apply -v"
+
 ### DTOS ###
 # Copy/paste all content of /etc/dtos over to home folder. A backup of config is created. (Be careful running this!)
 alias dtoscopy='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.config-backup-(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/dtos/* ~'
