@@ -350,6 +350,17 @@ alias mocp="bash -c mocp"
 # use bat instead of cat
 alias cat="bat"
 
+# faster cd
+alias D="cd ~/Downloads/"
+alias P="cd ~/Pictures/"
+
+# faster editing
+alias vsway="chezmoi edit ~/.config/sway/config"
+alias vway="chezmoi edit ~/.config/waybar/config2"
+alias vfish="chezmoi edit ~/.config/fish/config.fish"
+alias vwofi="chezmoi edit ~/.config/wofi/config"
+alias vlvim="chezmoi edit ~/.config/lvim/config.lua"
+
 ### DTOS ###
 # Copy/paste all content of /etc/dtos over to home folder. A backup of config is created. (Be careful running this!)
 alias dtoscopy='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.config-backup-(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/dtos/* ~'
