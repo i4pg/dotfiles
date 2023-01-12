@@ -60,10 +60,6 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 --   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
 -- }
 
-
-
-
-
 -- I thought there's no shortcut to open horizontal terminal but,
 -- Alt+1 open a horizontal terminal and guess what?
 -- what size of 10, which is the size that I specifeid it here
@@ -86,7 +82,7 @@ lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -299,69 +295,50 @@ lvim.plugins = {
   { 'dylanaraps/wal.vim' },
 }
 
--- markdown-preview
--- " specify browser to open preview page
--- " for path with space
--- " valid: `/path/with\ space/xxx`
--- " invalid: `/path/with\\ space/xxx`
--- default: ''
--- vim.g.mkdp_browser = '/bin/librewolf'
 
--- Autocommands (https://neovim.io/doc/user/autocmd.html)
--- vim.api.nvim_create_autocmd("BufEnter", {
---   pattern = { "*.json", "*.jsonc" },
---   -- enable wrap mode for json files only
---   command = "setlocal wrap",
--- })
--- vim.api.nvim_create_autocmd("FileType", {
---   pattern = "zsh",
---   callback = function()
---     -- let treesitter use bash highlight for zsh files as well
---     require("nvim-treesitter.highlight").attach(0, "bash")
---   end,
--- })
---
---
-
--- enable rainbow parentheses
-lvim.builtin.treesitter.rainbow.enable = true
-
--- require("catppuccin").setup({
---   flavour = "mocha", -- latte, frappe, macchiato, mocha
---   background = { -- :h background
---     light = "latte",
---     dark = "mocha",
---   },
---   compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
---   transparent_background = false,
---   term_colors = true,
---   dim_inactive = {
---     enabled = true,
---     shade = "dark",
---     percentage = 0.15,
---   },
---   styles = {
---     comments = { "italic" },
---     conditionals = { "italic" },
---     loops = {},
---     functions = {},
---     keywords = {},
---     strings = {},
---     variables = {},
---     numbers = {},
---     booleans = {},
---     properties = {},
---     types = {},
---     operators = {},
---   },
---   color_overrides = {},
---   custom_highlights = {},
---   integrations = {
---     cmp = true,
---     gitsigns = true,
---     nvimtree = true,
---     telescope = true,
---     treesitter = true,
---     -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
---   },
--- })
+lvim.builtin.treesitter.rainbow.enable = true -- enable rainbow parentheses
+vim.opt.backup = false -- creates a backup file
+vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
+vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying messages
+vim.opt.colorcolumn = "99999" -- fixes indentline for now
+vim.opt.completeopt = { "menuone", "noselect" }
+vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
+vim.opt.fileencoding = "utf-8" -- the encoding written to a file
+vim.opt.foldmethod = "manual" -- folding set to "expr" for treesitter based folding
+vim.opt.foldexpr = "" -- set to "nvim_treesitter#foldexpr()" for treesitter based folding
+vim.opt.guifont = "monospace:h17" -- the font used in graphical neovim applications
+vim.opt.hidden = true -- required to keep multiple buffers and open multiple buffers
+vim.opt.hlsearch = true -- highlight all matches on previous search pattern
+vim.opt.ignorecase = true -- ignore case in search patterns
+vim.opt.mouse = "a" -- allow the mouse to be used in neovim
+vim.opt.pumheight = 10 -- pop up menu height
+vim.opt.showmode = false -- we don't need to see things like -- INSERT -- anymore
+vim.opt.showtabline = 2 -- always show tabs
+vim.opt.smartcase = true -- smart case
+vim.opt.smartindent = true -- make indenting smarter again
+vim.opt.splitbelow = true -- force all horizontal splits to go below current window
+vim.opt.splitright = true -- force all vertical splits to go to the right of current window
+vim.opt.swapfile = false -- creates a swapfile
+vim.opt.termguicolors = true -- set term gui colors (most terminals support this)
+vim.opt.timeoutlen = 100 -- time to wait for a mapped sequence to complete (in milliseconds)
+vim.opt.title = true -- set the title of window to the value of the titlestring
+vim.opt.titlestring = "%<%F%=%l/%L - nvim" -- what the title of the window will be set to
+vim.opt.undodir = vim.fn.stdpath "cache" .. "/undo"
+vim.opt.undofile = true -- enable persistent undo
+vim.opt.updatetime = 300 -- faster completion
+vim.opt.writebackup = false -- if a file is being edited by another program (or was written to file while editing with another program) it is not allowed to be edited
+vim.opt.expandtab = true -- convert tabs to spaces
+vim.opt.shiftwidth = 2 -- the number of spaces inserted for each indentation
+vim.opt.tabstop = 2 -- insert 2 spaces for a tab
+vim.opt.cursorline = true -- highlight the current line
+vim.opt.number = true -- set numbered lines
+vim.opt.relativenumber = false -- set relative numbered lines
+vim.opt.numberwidth = 4 -- set number column width to 2 {default 4}
+vim.opt.signcolumn = "yes" -- always show the sign column otherwise it would shift the text each time
+vim.opt.wrap = false -- display lines as one long line
+vim.opt.spell = false
+vim.opt.spelllang = "en"
+vim.opt.scrolloff = 8 -- is one of my fav
+vim.opt.sidescrolloff = 8
+lvim.transparent_window = true
+lvim.builtin.lualine.style = "default" -- or "none"
