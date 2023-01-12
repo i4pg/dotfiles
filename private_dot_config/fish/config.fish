@@ -6,7 +6,6 @@ set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 set -U fish_user_paths /usr/share/sway/scripts/ $fish_user_paths
 set -Ux fish_user_paths $HOME/.config/.rbenv/bin $fish_user_paths # rbenv
 set -Ua fish_user_paths $HOME/.cargo/bin  # Rust
-set -Ua fish_user_paths /usr/bin/vendor_perl/exiftool #ExifTool
 set -Ux EDITOR lvim
 set -Ux PATH "/home/iwxi/.local/bin:$PATH"
 
@@ -365,6 +364,9 @@ alias vkitty="chezmoi edit ~/.config/kitty/kitty.conf"
 
 # chezmoi
 alias chezapply="chezmoi apply -v"
+
+# ExifTool
+alias exiftool="/usr/bin/vendor_perl/exiftool"
 
 ### DTOS ###
 # Copy/paste all content of /etc/dtos over to home folder. A backup of config is created. (Be careful running this!)
