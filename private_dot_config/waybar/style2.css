@@ -13,7 +13,7 @@
 
 @keyframes blink_red {
   to {
-    background-color: @color8;
+    background-color: @foreground;
     color: @background;
   }
 }
@@ -48,8 +48,8 @@ window > box {
 
 /* Workspaces */
 #workspaces:hover {
-  /* background-color: @color11; */
-  background-color: @color15;
+  /* background-color: @foreground; */
+  background-color: @foreground;
   border: none;
 }
 
@@ -58,27 +58,26 @@ window > box {
   padding-left: .4rem;
   padding-top: .1rem;
   padding-bottom: .1rem;
-  /* color: @color11; */
-  color: @color15;
+  color: @foreground;
   border: .2px solid transparent;
   background: transparent;
 }
 
 #workspaces button.focused {
-  /* color: @color12; */
-  color: @color13;
+  /* color: @foreground; */
+  color: @foreground;
 }
 
 #workspaces button:hover {
   border: .2px solid transparent;
-  /* color: @color7; */
-  color: @color14;
+  /* color: @foreground; */
+  color: @foreground;
 }
 
 /* Tooltip */
 tooltip {
   /* background: @crust; */
-  background: @color0;
+  background: @foreground;
 }
 
 tooltip label {
@@ -88,14 +87,14 @@ tooltip label {
 
 /* battery */
 #battery {
-  color: @color11;
-  color: @color11;
+  color: @foreground;
+  color: @foreground;
 }
 #battery.charging, #battery.full, #battery.discharging {
-  color: @color5;
+  color: @foreground;
 }
 #battery.critical:not(.charging) {
-  color: @color8;
+  color: @foreground;
 }
 #custom-powermenu {
   color: @red;
@@ -103,61 +102,61 @@ tooltip label {
 
 /* mpd */
 #mpd.paused {
-  color: @color15;
+  color: @foreground;
   font-style: italic;
 }
 #mpd.stopped {
-  color: @color15;
+  color: @foreground;
   /* background: transparent; */
 }
 #mpd {
-  color: @color12;
+  color: @foreground;
 }
 
 /* Extra */
 #custom-cava-internal{
-  color: @color6;
+  color: @foreground;
   padding-right: 1rem;
 }
 #custom-launcher {
-  color: @color2;
+  color: @foreground;
 }
 #memory {
-  color: @color3;
+  color: @foreground;
 }
 #cpu {
-  color: @color4;
+  color: @foreground;
 }
 #clock {
-  color: @color7;
+  color: @foreground;
 }
 #idle_inhibitor {
-  color: @color9;
+  color: @foreground;
 }
 #temperature {
-  color: @color5;
+  color: @foreground;
 }
 #backlight {
-  color: @color10;
+  color: @foreground;
 }
 #pulseaudio {
-  color: @color6;
+  color: @foreground;
 }
 #network {
-  color: @color7;
+  color: @foreground;
 }
 #network.disconnected {
-  color: @color8;
+  color: @foreground;
 }
 #disk {
-  color: @color9;
+  color: @foreground;
 }
 #custom-pacman{
-  color: @color12;
+  color: @foreground;
 }
 #custom-scratchpad-indicator {
-  color: @color11
+  color: @foreground
 }
 #custom-weather {
-  color: @color10;
+  color: @foreground;
 }
