@@ -356,7 +356,7 @@ alias P="cd ~/Pictures/"
 
 # faster editing
 alias vsway="chezmoi edit ~/.config/sway/config"
-alias vway="chezmoi edit ~/.config/waybar/config2"
+alias vway="chezmoi edit ~/.config/waybar/config2.jsonc"
 alias vfish="chezmoi edit ~/.config/fish/config.fish"
 alias vwofi="chezmoi edit ~/.config/wofi/config"
 alias vlvim="chezmoi edit ~/.config/lvim/config.lua"

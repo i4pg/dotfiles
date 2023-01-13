@@ -16,4 +16,4 @@ done
 sed -i "/hwmon-path/c\ \ \ \ \"hwmon-path\": \"$HWMON_PATH\"," $SDIR/config1 && sed -i "/hwmon-path/c\ \ \ \ \"hwmon-path\": \"$HWMON_PATH\"," $SDIR/config2
 
 #waybar -c "$SDIR"/config1 -s "$SDIR"/style1.css &
-waybar -c "$SDIR"/config2 -s "$SDIR"/style2.css &
+waybar -c "$SDIR"/config2.jsonc -s "$SDIR"/style2.css &
