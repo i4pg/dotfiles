@@ -40,7 +40,7 @@ window#waybar {
 }
 
 window > box {
-  background-color: @foreground;
+  background-color: @color3;
   margin: .3rem;
   margin-bottom: 0;
 }
