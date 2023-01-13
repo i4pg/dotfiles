@@ -39,7 +39,7 @@
     "exec": "~/.config/waybar/Cava.sh",
     "tooltip": false
   },
-  "sway/workspaces": {
+                      "sway/workspaces": {
     "disable-scroll": true,
     /* "all-outputs": true, */
     "active-only": true,
