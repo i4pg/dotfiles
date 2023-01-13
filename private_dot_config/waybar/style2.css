@@ -13,7 +13,7 @@
 
 @keyframes blink_red {
   to {
-    background-color: @foreground;
+    background-color: @red;
     color: @background;
   }
 }
@@ -40,7 +40,7 @@ window#waybar {
 }
 
 window > box {
-  background-color: @color3;
+  background-color: transparent;
   margin: .3rem;
   margin-bottom: 0;
 }
@@ -48,8 +48,7 @@ window > box {
 
 /* Workspaces */
 #workspaces:hover {
-  /* background-color: @foreground; */
-  background-color: @foreground;
+  background-color: @color7;
   border: none;
 }
 
@@ -58,43 +57,38 @@ window > box {
   padding-left: .4rem;
   padding-top: .1rem;
   padding-bottom: .1rem;
-  color: @foreground;
+  color: @color4;
   border: .2px solid transparent;
   background: transparent;
 }
 
 #workspaces button.focused {
-  /* color: @foreground; */
-  color: @foreground;
+  color: @color1;
 }
 
 #workspaces button:hover {
   border: .2px solid transparent;
-  /* color: @foreground; */
-  color: @foreground;
+  color: @color7;
 }
 
 /* Tooltip */
 tooltip {
-  /* background: @crust; */
-  background: @foreground;
+  background-color: @background;
 }
 
 tooltip label {
-  /* color: @text; */
   color: @foreground;
 }
 
 /* battery */
 #battery {
-  color: @foreground;
-  color: @foreground;
+  color: @color2;
 }
 #battery.charging, #battery.full, #battery.discharging {
   color: @foreground;
 }
 #battery.critical:not(.charging) {
-  color: @foreground;
+  color: @color1;
 }
 #custom-powermenu {
   color: @red;
@@ -102,7 +96,7 @@ tooltip label {
 
 /* mpd */
 #mpd.paused {
-  color: @foreground;
+  color: @color4;
   font-style: italic;
 }
 #mpd.stopped {
@@ -110,16 +104,16 @@ tooltip label {
   /* background: transparent; */
 }
 #mpd {
-  color: @foreground;
+  color: @color3;
 }
 
 /* Extra */
 #custom-cava-internal{
-  color: @foreground;
+  color: @color3;
   padding-right: 1rem;
 }
 #custom-launcher {
-  color: @foreground;
+  color: @color9;
 }
 #memory {
   color: @foreground;
@@ -131,10 +125,10 @@ tooltip label {
   color: @foreground;
 }
 #idle_inhibitor {
-  color: @foreground;
+  color: @color14;
 }
 #temperature {
-  color: @foreground;
+  color: @color15;
 }
 #backlight {
   color: @foreground;
@@ -152,11 +146,11 @@ tooltip label {
   color: @foreground;
 }
 #custom-pacman{
-  color: @foreground;
+  color: @color8;
 }
 #custom-scratchpad-indicator {
-  color: @foreground
+  color: @color12
 }
 #custom-weather {
-  color: @foreground;
+  color: @color5;
 }
