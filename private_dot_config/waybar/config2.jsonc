@@ -171,7 +171,7 @@
 	"interval": 3600,                     // every hour
 	"exec": "checkupdates | wc -l",       // # of updates
 	"exec-if": "exit 0",                  // always run; consider advanced run conditions
-	"exec-if": "checkupdates",                  // always run; consider advanced run conditions
+	"exec-if": "checkupdates | wc -l > 0",                  // always run; consider advanced run conditions
 	/* "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system */
 	"on-click": "kitty yay -Syu",
 	"signal": 8
