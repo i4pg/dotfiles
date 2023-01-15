@@ -124,7 +124,7 @@ require 'lspconfig'.yamlls.setup {}
 -- ---@usage disable automatic installation of servers
 -- lvim.lsp.installer.setup.automatic_installation = false
 
--- ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
+-- ---configure a server manually. !!Requires `:Lvimfalse` to take effect!!
 -- ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
 -- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
 -- local opts = {} -- check the lspconfig documentation for a list of all possible options
@@ -297,7 +297,7 @@ lvim.plugins = {
 
 
 lvim.builtin.treesitter.rainbow.enable = true -- enable rainbow parentheses
-vim.opt.backup = true -- creates a backup file
+vim.opt.backup = false -- creates a backup file
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
 vim.opt.colorcolumn = "99999" -- fixes indentline for now
