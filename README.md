@@ -17,13 +17,13 @@ This is a seamless configuration, where everything just works, but only for me. 
 </p>
 
 
-## Configuration :computer:<img alt="" align="right" src="https://img.shields.io/github/repo-size/Flinner/dots?color=g&logo=github&style=flat-square"/>
+## Configuration :computer:<img alt="" align="right" src="https://img.shields.io/github/repo-size/i4pg/dotsfiles?color=g&logo=github&style=flat-square"/>
 
   <img href="Nice ha?" src="assest/image.png" alt="minimal" align="right" width="500px"/>
 
 :octocat: _Those are some details about my setup_
 
-+ **OS**							• [Arch Linux](https://archlinux.org/)
++ **OS**							• [`arch`](https://archlinux.org/)
 + **WM**							• [`sway`](https://swaywm.org/)
 + **Bar**							• [`waybar`](https://github.com/Alexays/Waybar)
 + **Launcher**						• [`wofi`](https://man.archlinux.org/man/wofi.1.en)
@@ -31,7 +31,7 @@ This is a seamless configuration, where everything just works, but only for me. 
 + **Shell**							• [`fish`](https://fishshell.com/) 
 + **Terminal**						• [`kitty`](https://sw.kovidgoyal.net/kitty/) 
 + **Editor**						• [`lvim`](https://www.lunarvim.org/)
-+ **Theme**							• [`catppuccin`] (https://catppuccin.com/) - *in some apps*
++ **Theme**							• [`catppuccin`](https://catppuccin.com/)
 + **Color Scheme**					• [`pywall`](https://github.com/dylanaraps/pywal) 
 + **Wallpapers**						• [`dwall`](https://github.com/adi1090x/dynamic-wallpaper) 
 + **Resource monitor**				• [`btm`](https://github.com/ClementTsang/bottom)
