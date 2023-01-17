@@ -40,7 +40,7 @@ This is a seamless configuration, where everything just works, but only for me. 
 + **File Manager**							• [`fm`](https://github.com/knipferrc/fm)
 + **Fuzzy finder**					• [`fzf`](https://github.com/junegunn/fzf) 
 + **Dotfiles Manager**						• [`chezmoi`](https://www.chezmoi.io/)
-+ **System information**			• [`fastfetch`](https://github.com/LinusDierheimer/fastfetch)
++ **System information**			• [`neofetch`](https://github.com/dylanaraps/neofetch)
 + **Reader**							• [`zathura`](https://pwmt.org/projects/zathura/) 
 + **Browser**						• [`firefox`](https://www.mozilla.org/en-US/firefox/new/)
 
