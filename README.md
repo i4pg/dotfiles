@@ -20,8 +20,8 @@ This is a seamless configuration, where everything just works, but only for me. 
 ## Configuration :computer:<img alt="" align="right" src="https://img.shields.io/github/repo-size/i4pg/dotfiles?style=for-the-badge"/>
 
   <img href="what about this?" src="./assest/showcase.gif" alt="minimal" align="right" width="500px"/>
+  <img href="Nice ha?" src="assest/image_3.png" alt="minimal" align="right" width="500px"/>
   <img href="better now?" src="assest/image_2.png" alt="minimal" align="right" width="500px"/>
-  <img href="Nice ha?" src="assest/image.png" alt="minimal" align="right" width="500px"/>
 
 :octocat: _Those are some details about my setup_
 
