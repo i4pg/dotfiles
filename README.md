@@ -1,5 +1,5 @@
 <h1 align="center">
-:space_invader: Aesthetic SwayWM Environment :space_invader:
+:space_invader: Aesthetic Dynamic SwayWM Environment :space_invader:
 </h1>
 
 ![2023-01-17](assest/one_peice.jpg)
@@ -19,9 +19,9 @@ This is a seamless configuration, where everything just works, but only for me. 
 
 ## Configuration :computer:<img alt="" align="right" src="https://img.shields.io/github/repo-size/i4pg/dotfiles?style=for-the-badge"/>
 
+  <img href="what about this?" src="./assest/image_3.png" alt="minimal" align="center" />
   <img href="what about this?" src="./assest/showcase.gif" alt="minimal" align="right" width="500px"/>
   <img href="Nice ha?" src="assest/image_3.png" alt="minimal" align="right" width="500px"/>
-  <img href="better now?" src="assest/image_2.png" alt="minimal" align="right" width="500px"/>
 
 :octocat: _Those are some details about my setup_
 
