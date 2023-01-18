@@ -1,5 +1,5 @@
 <h1 align="center">
-:space_invader: Aesthetic Dynamic SwayWM Environment :space_invader:
+:space_invader: Aesthetic Dynamic SwayWM Environment
 </h1>
 
 ![2023-01-17](assest/one_peice.jpg)
