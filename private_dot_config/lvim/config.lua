@@ -292,7 +292,7 @@ lvim.plugins = {
       })
     end,
   },
-  { 'leaty/wal.vim/tree/feature/neovim-treesitter' },
+  { 'i4pg/wal.vim' },
   { 'kamykn/spelunker.vim' },
 }
 
