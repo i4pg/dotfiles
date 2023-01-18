@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
--- lvim.colorscheme = "base16-tokyodark-terminal"
+lvim.colorscheme = "base16-gruvbox-dark-hard"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
