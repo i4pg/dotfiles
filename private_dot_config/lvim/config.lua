@@ -293,6 +293,7 @@ lvim.plugins = {
     end,
   },
   { 'dylanaraps/wal.vim' },
+  { 'kamykn/spelunker.vim' },
 }
 
 
