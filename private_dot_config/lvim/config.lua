@@ -292,7 +292,7 @@ lvim.plugins = {
       })
     end,
   },
-  { 'dylanaraps/wal.vim' },
+  { 'leaty/wal.vim/tree/feature/neovim-treesitter' },
   { 'kamykn/spelunker.vim' },
 }
 
