@@ -48,20 +48,20 @@ bindsym $mod+period workspace next
 bindsym $mod+comma workspace prev
 
 
-# bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-# bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-# bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-# bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-# bindsym XF86MonBrightnessUp exec light -A 5
-# bindsym XF86MonBrightnessDown exec light -U 5
-# bindsym XF86AudioPlay exec playerctl play-pause
-# bindsym XF86AudioNext exec playerctl next
-# bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
-# output * adaptive_sync on
+output * adaptive_sync on
 #   
-# exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-# exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
 
 
 for_window [app_id="keepassxc"]                  floating enable
@@ -79,12 +79,12 @@ exec  --no-startup-id  fcitx5 -d
 exec_always  --no-startup-id  nm-applet --indicator &
 exec_always  --no-startup-id  syncthing &
 exec_always  --no-startup-id  autotiling-rs &
-exec  --no-startup-id  dwall -s catalina
+exec  --no-startup-id  dwall -s mojaveHD
 exec_always  --no-startup-id  ~/.config/waybar/launch_waybar.sh &
 
 
 set $gnome-schema org.gnome.desktop.interface
-seat seat0 xcursor_theme Catppuccin-Mocha-Dark-Cursors 18
+seat seat0 xcursor_theme Catppuccin-Mocha-Dark-Cursors 14
 exec_always {
     gsettings set $gnome-schema gtk-theme 'Catppuccin-Mocha-Standard-Sky-Dark'
     gsettings set $gnome-schema icon-theme 'Papirus-Dark'
