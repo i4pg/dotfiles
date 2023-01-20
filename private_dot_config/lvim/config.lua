@@ -10,8 +10,8 @@ an executable
 
 -- general
 lvim.log.level = "warn"
--- lvim.format_on_save.enabled = true
--- lvim.colorscheme = "wal"
+lvim.format_on_save.enabled = true
+lvim.colorscheme = "bsae16-gruvbox-dark-hard"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -353,7 +353,7 @@ lvim.plugins = {
   { 'olimorris/onedarkpro.nvim' },
   { 'rmehri01/onenord.nvim' },
   { 'RishabhRD/gruvy' },
-  { 'echasnovski/mini.nvim#minischeme' },
+  -- { 'echasnovski/mini.nvim#minischeme' },
   { 'luisiacc/gruvbox-baby' },
   { 'titanzero/zephyrium' },
   { 'rebelot/kanagawa.nvim' },
@@ -420,5 +420,5 @@ vim.opt.spell = false
 vim.opt.spelllang = "en"
 vim.opt.scrolloff = 8 -- is one of my fav
 vim.opt.sidescrolloff = 8
-lvim.transparent_window = false
+lvim.transparent_window = true
 -- lvim.builtin.lualine.style = "default" -- or "none"
