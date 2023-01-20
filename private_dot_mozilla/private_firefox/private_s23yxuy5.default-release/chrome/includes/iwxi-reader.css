@@ -1,0 +1,19 @@
+/* @import url('file:///home/iwxi/.cache/wal/colors.css'); */
+@import "~/.cache/wal/colors.css";
+
+body.loaded.dark {
+  color: var(--foreground) !important;
+  background-color: var(--background) !important;
+}
+
+body.loaded.dark h1 {
+  color: var(--color1) !important;
+}
+
+body.loaded.dark h2, body.loaded.dark h3, body.loaded.dark h4, body.loaded.dark h5, body.loaded.dark h6 {
+  color: var(--color4) !important;
+}
+
+body.loaded.dark strong {
+  color: var(--color5) !important;
+}
