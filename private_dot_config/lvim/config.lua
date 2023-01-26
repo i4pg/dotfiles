@@ -644,4 +644,4 @@ ins_right {
 }
 
 -- Now don't forget to initialize lualine
--- lualine.setup(config)
+lualine.setup(config)
