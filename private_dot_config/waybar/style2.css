@@ -13,7 +13,7 @@
 
 @keyframes blink_red {
   to {
-    background-color: @red;
+    background-color: @color9;
     color: @background;
   }
 }
@@ -48,7 +48,7 @@ window > box {
 
 /* Workspaces */
 #workspaces:hover {
-  background-color: @color7;
+  background-color: @color1;
   border: none;
 }
 
@@ -57,18 +57,18 @@ window > box {
   padding-left: .4rem;
   padding-top: .1rem;
   padding-bottom: .1rem;
-  color: @color4;
+  color: @color2;
   border: .2px solid transparent;
   background: transparent;
 }
 
 #workspaces button.focused {
-  color: @color1;
+  color: @color3;
 }
 
 #workspaces button:hover {
   border: .2px solid transparent;
-  color: @color7;
+  color: @color4;
 }
 
 /* Tooltip */
@@ -82,13 +82,13 @@ tooltip label {
 
 /* battery */
 #battery {
-  color: @color2;
+  color: @color5;
 }
 #battery.charging, #battery.full, #battery.discharging {
   color: @foreground;
 }
 #battery.critical:not(.charging) {
-  color: @color1;
+  color: @color6;
 }
 #custom-powermenu {
   color: @red;
@@ -96,7 +96,7 @@ tooltip label {
 
 /* mpd */
 #mpd.paused {
-  color: @color4;
+  color: @color7;
   font-style: italic;
 }
 #mpd.stopped {
@@ -104,25 +104,25 @@ tooltip label {
   /* background: transparent; */
 }
 #mpd {
-  color: @color3;
+  color: @color8;
 }
 
 /* Extra */
 #custom-cava-internal{
-  color: @color3;
+  color: @color9;
   padding-right: 1rem;
 }
 #custom-launcher {
-  color: @color9;
+  color: @color10;
 }
 #memory {
-  color: @foreground;
+  color: @color11;
 }
 #cpu {
-  color: @foreground;
+  color: @color12;
 }
 #clock {
-  color: @foreground;
+  color: @color13;
 }
 #idle_inhibitor {
   color: @color14;
@@ -131,26 +131,26 @@ tooltip label {
   color: @color15;
 }
 #backlight {
-  color: @foreground;
+  color: @color16;
 }
 #pulseaudio {
-  color: @foreground;
+  color: @color17;
 }
 #network {
-  color: @foreground;
+  color: @color1;
 }
 #network.disconnected {
   color: @foreground;
 }
 #disk {
-  color: @foreground;
+  color: @color1;
 }
 #custom-pacman{
-  color: @color8;
+  color: @color2;
 }
 #custom-scratchpad-indicator {
-  color: @color12
+  color: @color3
 }
 #custom-weather {
-  color: @color5;
+  color: @color4;
 }
