@@ -373,6 +373,7 @@ lvim.plugins = {
   { 'kvrohit/mellow.nvim' },
   { 'gbprod/nord.nvim' },
   { 'Yazeed1s/oh-lucy.nvim' },
+  { 'sainnhe/everforest' },
 }
 
 
