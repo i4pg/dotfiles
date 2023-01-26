@@ -37,11 +37,10 @@
 /* Bar */
 window#waybar {
   background-color: transparent;
-  margin: 0 1rem;
 }
 
 window > box {
-  background-color: @background;
+  background-color: transparent;
   margin: .3rem;
   margin-bottom: 0;
 }
