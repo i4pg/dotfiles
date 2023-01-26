@@ -27,7 +27,7 @@ set $right l
 
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+Return exec kitty --class="termfloat"
-bindsym Mod4+e exec ~/.config/wofi/scripts/wofi-emoji/wofi-emoji
+bindsym Mod4+Shift+e exec bemoji -t
 
 bindsym $mod+d exec $menu
 bindsym $mod+w exec $browser
