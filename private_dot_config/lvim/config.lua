@@ -423,7 +423,7 @@ vim.opt.spelllang = "en"
 vim.opt.scrolloff = 8 -- is one of my fav
 vim.opt.sidescrolloff = 8
 lvim.transparent_window = false
-lvim.builtin.lualine.style = "default" -- or "none"
+lvim.builtin.lualine.style = "lvim" -- or "none"
 
 -- See: https://github.com/hoob3rt/lualine.nvim
 
