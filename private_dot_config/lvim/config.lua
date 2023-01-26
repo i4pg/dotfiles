@@ -374,6 +374,7 @@ lvim.plugins = {
   -- { 'gbprod/nord.nvim' },
   -- { 'Yazeed1s/oh-lucy.nvim' },
   { 'sainnhe/everforest' },
+  { 'ryanoasis/vim-devicons' },
 }
 
 
