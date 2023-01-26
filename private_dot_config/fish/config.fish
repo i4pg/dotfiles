@@ -9,7 +9,7 @@ set -Ux fish_user_paths $HOME/.config/.rbenv/bin $fish_user_paths # rbenv
 set -Ua fish_user_paths $HOME/.cargo/bin  # Rust
 set -Ux EDITOR lvim
 set -Ux JEKYLL_EDITOR lvim
-source ./themes/kanagawa.conf
+source ~/.config/fish/themes/kanagawa.conf
 
 
 status --is-interactive; and rbenv init - fish | source # rbenv
