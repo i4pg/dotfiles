@@ -10,9 +10,9 @@
     "custom/cava-internal",
     "sway/mode",
   ],
-    "sway/mode": {
-        "format": " {}"
-    },
+  "sway/mode": {
+    "format": " {}"
+  },
   "modules-center": [
     "custom/weather",
     "clock",
@@ -26,7 +26,7 @@
     /* "network", */
     "battery",
     "tray",
-    "custom/recording",
+    // "custom/recording",
     "custom/powermenu",
   ],
   "custom/launcher": {
@@ -39,7 +39,7 @@
     "exec": "~/.config/waybar/Cava.sh",
     "tooltip": false
   },
-                      "sway/workspaces": {
+  "sway/workspaces": {
     "disable-scroll": true,
     /* "all-outputs": true, */
     "active-only": true,
@@ -73,7 +73,12 @@
     "on-scroll-up": "light -A 7",
     "on-scroll-down": "light -U 7",
     "format": "{icon} {percent}%",
-    "format-icons": ["","","",""]
+    "format-icons": [
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   "disk": {
     "interval": 30,
@@ -84,10 +89,14 @@
   },
   "pulseaudio": {
     "scroll-step": 1,
-    "format": "{icon} {volume}%", 
+    "format": "{icon} {volume}%",
     "format-muted": "婢 Muted",
     "format-icons": {
-      "default": ["", "", ""]
+      "default": [
+        "",
+        "",
+        ""
+      ]
     },
     /* "states": { */
     /*   "warning": 100, */
@@ -103,7 +112,17 @@
       "critical": 10
     },
     "format": "{icon} {capacity}%",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
     "format-full": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
     "tooltip": true,
@@ -133,14 +152,14 @@
     "max-length": 25,
     "format": "<span foreground='#bb9af7'></span> {title}",
     "format-paused": " {title}",
-    "format-stopped":"<span foreground='#bb9af7'></span>",
+    "format-stopped": "<span foreground='#bb9af7'></span>",
     "format-disconnected": "",
     "on-click": "mpc --quiet toggle",
     "on-click-right": "mpc ls | mpc add",
     "on-click-middle": "kitty ncmpcpp",
     "on-scroll-up": "mpc --quiet prev",
     "on-scroll-down": "mpc --quiet next",
-    "smooth-scrolling-threshold":5,
+    "smooth-scrolling-threshold": 5,
     "tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
   },
   "network": {
@@ -167,42 +186,41 @@
     "spacing": 5
   },
   "custom/pacman": {
-	"format": " {}",
-	"interval": 3600,                     // every hour
-	"exec": "checkupdates | wc -l",       // # of updates
-	"exec-if": "exit 0",                  // always run; consider advanced run conditions
-	"exec-if": "checkupdates | wc -l > 0",                  // always run; consider advanced run conditions
-	/* "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system */
-	"on-click": "kitty yay -Syu",
-	"signal": 8
-},
-"custom/scratchpad-indicator": {
+    "format": " {}",
+    "interval": 3600, // every hour
+    "exec": "checkupdates | wc -l", // # of updates
+    "exec-if": "exit 0", // always run; consider advanced run conditions
+    "exec-if": "checkupdates | wc -l > 0", // always run; consider advanced run conditions
+    /* "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system */
+    "on-click": "kitty yay -Syu",
+    "signal": 8
+  },
+  "custom/scratchpad-indicator": {
     "interval": 3,
     "return-type": "json",
     "exec": "swaymsg -t get_tree | jq --unbuffered --compact-output '(recurse(.nodes[]) | select(.name == \"__i3_scratch\") | .focus) as $scratch_ids | [..  | (.nodes? + .floating_nodes?) // empty | .[] | select(.id |IN($scratch_ids[]))] as $scratch_nodes | if ($scratch_nodes|length) > 0 then { text: \"\\($scratch_nodes | length)\", tooltip: $scratch_nodes | map(\"\\(.app_id // .window_properties.class) (\\(.id)): \\(.name)\") | join(\"\\n\") } else empty end'",
     "format": " {}",
     "on-click": "exec swaymsg 'scratchpad show'",
     "on-click-right": "exec swaymsg 'move scratchpad'"
-},
-"custom/weather": {
+  },
+  "custom/weather": {
     "format": "{}",
     "tooltip": true,
     "interval": 3600,
     "exec": "~/.config/waybar/wabar-wttr.py",
     "return-type": "json"
-},
-
-"custom/recording": {
-	"exec": "$XDG_CONFIG_HOME/waybar/scripts/recording.sh status",
-	"format": "{}",
-	"on-click": "$XDG_CONFIG_HOME/waybar/scripts/recording.sh toggle fullscreen",
-	"on-click-right": "$XDG_CONFIG_HOME/waybar/scripts/recording.sh toggle region",
-	"restart-interval": 1,
-	"return-type": "json",
-	"tooltip": true
-},
-"sway/language": {
+  },
+  "custom/recording": {
+    "exec": "$XDG_CONFIG_HOME/waybar/scripts/recording.sh status",
+    "format": "{}",
+    "on-click": "$XDG_CONFIG_HOME/waybar/scripts/recording.sh toggle fullscreen",
+    "on-click-right": "$XDG_CONFIG_HOME/waybar/scripts/recording.sh toggle region",
+    "restart-interval": 1,
+    "return-type": "json",
+    "tooltip": true
+  },
+  "sway/language": {
     "format": "{}",
     "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
-},
+  },
 }
