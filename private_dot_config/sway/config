@@ -1,6 +1,5 @@
 include "$HOME/.cache/wal/colors-sway"
 include catppuccin-mocha
-
 xwayland disable
 
 font pango: FireCode Nerd Font Regular 5px
