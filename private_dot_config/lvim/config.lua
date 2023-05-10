@@ -374,6 +374,9 @@ lvim.plugins = {
   -- { 'gbprod/nord.nvim' },
   -- { 'Yazeed1s/oh-lucy.nvim' },
   { 'ryanoasis/vim-devicons' },
+  { 'mattn/emmet-vim' },
+  { 'AndrewRadev/tagalong.vim' },
+  { 'tpope/vim-surround' },
 }
 
 
