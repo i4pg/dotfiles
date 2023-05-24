@@ -9,7 +9,7 @@
   border-radius: 1rem;
   transition-property: background-color;
   transition-duration: 0.5s;
-  background-color: @base;
+  background-color: shade(@base, 0.9);
   color: @text;
 }
 
@@ -38,8 +38,7 @@
 
 /* Bar */
 window#waybar {
-  /* background-color: transparent; */
-  background-color: shade(@base, 0.9);
+  background-color: transparent;
   border: 2px solid alpha(@crust, 0.3);
 }
 
