@@ -9,7 +9,8 @@ set -Ux fish_user_paths $HOME/.config/.rbenv/bin $fish_user_paths # rbenv
 set -Ua fish_user_paths $HOME/.cargo/bin  # Rust
 set -Ux EDITOR lvim
 set -Ux JEKYLL_EDITOR lvim
-source ~/.config/fish/themes/kanagawa.conf
+
+# source ~/.config/fish/themes/kanagawa.conf #
 
 
 status --is-interactive; and rbenv init - fish | source # rbenv
@@ -19,7 +20,7 @@ set fish_greeting                                 # Supresses fish's intro messa
 # set TERM "xterm-256color"                         # Sets the terminal type
 set EDITOR "lvim"                 # $EDITOR use Emacs in terminal
 set VISUAL "lvim"              # $VISUAL use Emacs in GUI mode
-set BROWSER "librewolf"
+set BROWSER "firefox"
 
 ### SET MANPAGER
 ### Uncomment only one of these!
@@ -41,11 +42,11 @@ end
 ### END OF VI MODE ###
 
 ### AUTOCOMPLETE AND HIGHLIGHT COLORS ###
-set fish_color_normal brcyan
-set fish_color_autosuggestion '#7d7d7d'
-set fish_color_command brcyan
-set fish_color_error '#ff6c6b'
-set fish_color_param brcyan
+# set fish_color_normal brcyan
+# set fish_color_autosuggestion '#7d7d7d'
+# set fish_color_command brcyan
+# set fish_color_error '#ff6c6b'
+# set fish_color_param brcyan
 
 ### SPARK ###
 set -g spark_version 1.0.0
@@ -231,8 +232,8 @@ alias doomdoctor="~/.emacs.d/bin/doom doctor"
 alias doomupgrade="~/.emacs.d/bin/doom upgrade"
 alias doompurge="~/.emacs.d/bin/doom purge"
 alias vim='nvim'
-alias lvim ~/.local/bin/lvim
-alias v ~/.local/bin/lvim
+alias lvim="~/.local/bin/lvim"
+alias v="~/.local/bin/lvim"
 
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
@@ -363,6 +364,9 @@ alias vfish="chezmoi edit ~/.config/fish/config.fish"
 alias vwofi="chezmoi edit ~/.config/wofi/config"
 alias vlvim="chezmoi edit ~/.config/lvim/config.lua"
 alias vkitty="chezmoi edit ~/.config/kitty/kitty.conf"
+
+# gitui
+gitui -t mocha.ron
 
 # chezmoi
 alias chezapply="chezmoi apply -v"

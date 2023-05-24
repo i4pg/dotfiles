@@ -1,0 +1,23 @@
+(
+    selected_tab: Reset,
+    command_fg: Rgb(76, 79, 105),
+    selection_bg: Rgb(172, 176, 190),
+    selection_fg: Rgb(76, 79, 105),
+    cmdbar_bg: Rgb(230, 233, 239),
+    cmdbar_extra_lines_bg: Rgb(230, 233, 239),
+    disabled_fg: Rgb(140, 143, 161),
+    diff_line_add: Rgb(64, 160, 43),
+    diff_line_delete: Rgb(210, 15, 57),
+    diff_file_added: Rgb(223, 142, 29),
+    diff_file_removed: Rgb(230, 69, 83),
+    diff_file_moved: Rgb(136, 57, 239),
+    diff_file_modified: Rgb(254, 100, 11),
+    commit_hash: Rgb(114, 135, 253),
+    commit_time: Rgb(92, 95, 119),
+    commit_author: Rgb(32, 159, 181),
+    danger_fg: Rgb(210, 15, 57),
+    push_gauge_bg: Rgb(30, 102, 245),
+    push_gauge_fg: Rgb(239, 241, 245),
+    tag_fg: Rgb(220, 138, 120),
+    branch_fg: Rgb(23, 146, 153)
+)
