@@ -10,6 +10,7 @@
   transition-property: background-color;
   transition-duration: 0.5s;
   background-color: @base;
+  color: @text;
 }
 
 @keyframes blink_red {
@@ -37,7 +38,9 @@
 
 /* Bar */
 window#waybar {
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: shade(@base, 0.9);
+  border: 2px solid alpha(@crust, 0.3);
 }
 
 window > box {
