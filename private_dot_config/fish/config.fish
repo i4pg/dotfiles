@@ -366,7 +366,7 @@ alias vlvim="chezmoi edit ~/.config/lvim/config.lua"
 alias vkitty="chezmoi edit ~/.config/kitty/kitty.conf"
 
 # gitui
-gitui -t mocha.ron
+alias gitui="gitui -t mocha.ron"
 
 # chezmoi
 alias chezapply="chezmoi apply -v"
