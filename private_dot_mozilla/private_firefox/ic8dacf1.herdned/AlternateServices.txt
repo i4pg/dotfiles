@@ -1,0 +1,2 @@
+https:push.services.mozilla.com:443:.::3	0	19501	https:push.services.mozilla.com:443:push.services.mozilla.com:443::n:1687511027:h3:y:1684918692:n::|n:y:
+https:safebrowsing.googleapis.com:443:.:^firstPartyDomain=safebrowsing.86868755-6b82-4842-b301-72671a0db32e.mozilla:3	0	19501	https:safebrowsing.googleapis.com:443:safebrowsing.googleapis.com:443::n:1687511175:h3:y:1684918692:n:^firstPartyDomain=safebrowsing.86868755-6b82-4842-b301-72671a0db32e.mozilla:|n:y:

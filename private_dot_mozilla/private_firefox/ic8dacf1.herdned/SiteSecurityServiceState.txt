@@ -1,0 +1,2 @@
+firefox.settings.services.mozilla.com:HSTS	0	19501	1716454692676,1,0
+raw.githubusercontent.com:HSTS	0	19501	1716454692734,1,0

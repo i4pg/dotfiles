@@ -1,0 +1,31 @@
+1684769778449	Sync.LogManager	DEBUG	Flushing file log
+1684769778470	Sync.LogManager	DEBUG	Log cleanup threshold time: 1683905778470
+1684769778472	Sync.LogManager	DEBUG	Done deleting files.
+1684769779758	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1684770689961	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1684770747108	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1684770748389	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1684771438991	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1684771440288	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1684771501277	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1684771503908	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1684771647497	Sync.SyncScheduler	DEBUG	Network link status changed to "down". Offline?: false
+1684771647498	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1684771647498	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1684771670156	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1684771671397	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1684771671397	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1684771671398	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1684771671399	Sync.Service	DEBUG	User-Agent: Firefox/113.0.1 (Linux x86_64) FxSync/1.115.0.20230512132340.desktop
+1684771671399	Sync.Service	INFO	Starting sync at 2023-05-22 20:07:51 in browser session V4uQTW1ZwKPK
+1684771671399	Sync.Service	DEBUG	In sync: should login.
+1684771671399	Sync.Service	INFO	User logged in successfully - verifying login.
+1684771671399	Sync.SyncAuthManager	DEBUG	unlockAndVerifyAuthState has no FxA user
+1684771671399	Sync.Status	DEBUG	Status.login: error.login.reason.no_username => error.login.reason.no_username
+1684771671399	Sync.Status	DEBUG	Status.service: service.client_not_configured => service.client_not_configured
+1684771671400	Sync.Service	DEBUG	Fetching unlocked auth state returned error.login.reason.no_username
+1684771671400	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1684771671400	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1684771671400	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1684771671402	Sync.Service	DEBUG	Exception calling WrappedLock: Error: Login failed: error.login.reason.no_username(resource://services-sync/service.sys.mjs:1026:15) JS Stack trace: onNotify@service.sys.mjs:1026:15
+1684771671402	Sync.Service	DEBUG	Not syncing: login returned false.
