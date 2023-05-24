@@ -85,27 +85,27 @@ exec  --no-startup-id  wal --theme ~/kanagawa.json
 exec  --no-startup-id  redshift -l 25.348766:55.405403 &
 exec_always  --no-startup-id  ~/.config/waybar/launch_waybar.sh &
 
-set $gnome-schema org.gnome.desktop.interface
-seat seat0 xcursor_theme Catppuccin-Mocha-Dark-Cursors 14
-exec_always {
-    gsettings set $gnome-schema gtk-theme 'Catppuccin-Mocha-Standard-Sky-Dark'
-    gsettings set $gnome-schema icon-theme 'Papirus-Dark'
-    gsettings set $gnome-schema cursor-theme 'Catppuccin-Mocha-Dark-Cursors'
-    gsettings set $gnome-schema font-name 'FiraCode Nerd Font Regular 11'
-}
+# set $gnome-schema org.gnome.desktop.interface
+# seat seat0 xcursor_theme Catppuccin-Mocha-Dark-Cursors 14
+# exec_always {
+#     gsettings set $gnome-schema gtk-theme 'Catppuccin-Mocha-Standard-Sky-Dark'
+#     gsettings set $gnome-schema icon-theme 'Papirus-Dark'
+#     gsettings set $gnome-schema cursor-theme 'Catppuccin-Mocha-Dark-Cursors'
+#     gsettings set $gnome-schema font-name 'FiraCode Nerd Font Regular 11'
+# }
 
 input "type:keyboard" {           
     xkb_layout us
     xkb_options caps:escape
 }
-# class                 border  backgr. text indicator child_border
-client.focused          $background     $background     $foreground  $background       $background
-client.focused_inactive $background     $background     $foreground  $background       $background
-client.unfocused        $background     $background     $foreground  $background       $background
-client.urgent           $background     $background     $foreground  $background       $background
-client.placeholder      $background     $background     $foreground  $background       $background
 
-client.background       $background
+# target                 title     bg    text   indicator  border
+client.focused           $pink     $base $text  $rosewater $pink
+client.focused_inactive  $mauve    $base $text  $rosewater $mauve
+client.unfocused         $mauve    $base $text  $rosewater $mauve
+client.urgent            $peach    $base $peach $overlay0  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
 
 # PROTIP: You can also dynamically set dmenu's colors this way:
 bindsym $mod+v exec dmenu_run -nb "$foreground" -nf "$background" -sb "$background" -sf "$foreground"

@@ -5,7 +5,7 @@ settings:
     pretty_markdown: true
     borderless: false
 theme:
-    app_theme: "./themes/mocha.json"
+    app_theme: "~/.config/fm/themes/mocha.json"
     syntax_theme:
         light: pygments
         dark: dracula
