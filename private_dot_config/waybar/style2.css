@@ -39,7 +39,6 @@
 /* Bar */
 window#waybar {
   background-color: transparent;
-  border: 2px solid alpha(@crust, 0.3);
 }
 
 window > box {
