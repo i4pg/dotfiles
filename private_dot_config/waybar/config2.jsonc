@@ -31,7 +31,7 @@
   ],
   "custom/launcher": {
     "format": "",
-    "on-click": "sh $HOME/.config/rofi/bin/launcher",
+    "on-click": "wofi --show drun",
     "tooltip-format": "sudo pacman -Q linux",
     "tooltip": false,
   },
@@ -178,7 +178,7 @@
   },
   "custom/powermenu": {
     "format": "",
-    "on-click": "sh $HOME/.config/rofi/bin/powermenu",
+    "on-click": "~/.config/rofi/powermenu.sh",
     "tooltip": false
   },
   "tray": {
