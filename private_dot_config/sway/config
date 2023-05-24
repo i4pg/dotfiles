@@ -85,14 +85,14 @@ exec  --no-startup-id  wal --theme ~/kanagawa.json
 exec  --no-startup-id  redshift -l 25.348766:55.405403 &
 exec_always  --no-startup-id  ~/.config/waybar/launch_waybar.sh &
 
-# set $gnome-schema org.gnome.desktop.interface
-# seat seat0 xcursor_theme Catppuccin-Mocha-Dark-Cursors 14
-# exec_always {
-#     gsettings set $gnome-schema gtk-theme 'Catppuccin-Mocha-Standard-Sky-Dark'
-#     gsettings set $gnome-schema icon-theme 'Papirus-Dark'
-#     gsettings set $gnome-schema cursor-theme 'Catppuccin-Mocha-Dark-Cursors'
-#     gsettings set $gnome-schema font-name 'FiraCode Nerd Font Regular 11'
-# }
+set $gnome-schema org.gnome.desktop.interface
+seat seat0 xcursor_theme Catppuccin-Mocha-Light-Cursors
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Catppuccin-Mocha-Standard-Rosewater-Dark'
+    gsettings set $gnome-schema icon-theme 'Papirus-Dark'
+    gsettings set $gnome-schema cursor-theme 'Catppuccin-Mocha-Light-Cursors'
+    gsettings set $gnome-schema font-name 'FiraCode Nerd Font Regular 11'
+}
 
 input "type:keyboard" {           
     xkb_layout us
