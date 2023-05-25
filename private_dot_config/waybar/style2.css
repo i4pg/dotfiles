@@ -50,7 +50,7 @@ window > box {
 
 /* Workspaces */
 #workspaces:hover {
-  background-color: @maroon;
+  background-color: @rosewater;
   border: none;
 }
 
@@ -65,12 +65,12 @@ window > box {
 }
 
 #workspaces button.focused {
-  color: @yellow;
+  color: @red;
 }
 
 #workspaces button:hover {
   border: .2px solid transparent;
-  color: @sapphire;
+  color: @rosewater;
 }
 
 /* Tooltip */
@@ -86,11 +86,17 @@ tooltip label {
 #battery {
   color: @mauve;
 }
-#battery.charging, #battery.full, #battery.discharging {
-  color: @rosewater;
+#battery.full {
+  color: @green;
+}
+#battery.charging{
+  color: @teal;
+}
+#battery.discharging {
+  color: @peach;
 }
 #battery.critical:not(.charging) {
-  color: @green;
+  color: @pink;
 }
 #custom-powermenu {
   color: @red;
@@ -111,11 +117,11 @@ tooltip label {
 
 /* Extra */
 #custom-cava-internal{
-  color: @red;
+  color: @peach;
   padding-right: 1rem;
 }
 #custom-launcher {
-  color: @sky;
+  color: @yellow;
 }
 #memory {
   color: @peach;
@@ -124,25 +130,25 @@ tooltip label {
   color: @blue;
 }
 #clock {
-  color: @mauve;
+  color: @rosewater;
 }
 #idle_inhibitor {
   color: @green;
 }
 #temperature {
-  color: @rosewater;
+  color: @sapphire;
 }
 #backlight {
-  color: @flamingo;
+  color: @green;
 }
 #pulseaudio {
-  color: @mauve;
+  color: @mauve;  /* not active */
 }
 #network {
-  color: @pink;
+  color: @pink; /* not active */
 }
 #network.disconnected {
-  color: @foreground;
+  color: @foreground;  /* not active */
 }
 #disk {
   color: @maroon;
@@ -154,5 +160,5 @@ tooltip label {
   color: @yellow
 }
 #custom-weather {
-  color: @lavender;
+  color: @red;
 }
