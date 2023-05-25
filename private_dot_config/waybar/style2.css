@@ -59,7 +59,7 @@ window > box {
   padding-left: .4rem;
   padding-top: .1rem;
   padding-bottom: .1rem;
-  color: @teal;
+  color: @text;
   border: .2px solid transparent;
   background: transparent;
 }
