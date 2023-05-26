@@ -1,0 +1,226 @@
+{
+  "modules-left": [
+    "custom/launcher",
+    "sway/workspaces",
+    "custom/scratchpad-indicator",
+    "temperature",
+    "pulseaudio",
+    "idle_inhibitor",
+    "mpd",
+    "custom/cava-internal",
+    "sway/mode",
+  ],
+  "sway/mode": {
+    "format": " {}"
+  },
+  "modules-center": [
+    "custom/weather",
+    "clock",
+  ],
+  "modules-right": [
+    "backlight",
+    "custom/pacman",
+    "disk",
+    "memory",
+    "cpu",
+    /* "network", */
+    "battery",
+    "tray",
+    // "custom/recording",
+    "custom/powermenu",
+  ],
+  "custom/launcher": {
+    "format": "",
+    "on-click": "wofi --show drun",
+    "tooltip-format": "sudo pacman -Q linux",
+    "tooltip": false,
+  },
+  "custom/cava-internal": {
+    "exec": "~/.config/waybar/Cava.sh",
+    "tooltip": false
+  },
+  "sway/workspaces": {
+    "disable-scroll": true,
+    /* "all-outputs": true, */
+    "active-only": true,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十",
+      "urgent": "",
+      "focused": "",
+      "default": ""
+    }
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    },
+    "tooltip": false
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "on-scroll-up": "light -A 7",
+    "on-scroll-down": "light -U 7",
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "disk": {
+    "interval": 30,
+    "format": " {used}",
+    "path": "/home/iwxi/",
+    "tooltip": true,
+    "tooltip-format": "{used}/{total} => {path} {percentage_used}%",
+  },
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "{icon} {volume}%",
+    "format-muted": "婢 Muted",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    /* "states": { */
+    /*   "warning": 100, */
+    /* }, */
+    "scroll-step": 1,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "tooltip": false,
+  },
+  "battery": {
+    "interval": 10,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "format-full": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "tooltip": true,
+  },
+  "clock": {
+    "on-click": "~/.config/waybar/to_latte.sh &",
+    "on-click-right": "~/.config/waybar/wallpaper_random.sh &",
+    "on-click-middle": "~/.config/waybar/live_wallpaper.sh &",
+    "interval": 1,
+    "format": "{:%I:%M %p  %A %b %d}",
+    "tooltip": true,
+    "tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>"
+  },
+  "memory": {
+    "on-click": "kitty btm",
+    "interval": 1,
+    "format": "﬙ {percentage}%",
+    "states": {
+      "warning": 85,
+    },
+  },
+  "cpu": {
+    "interval": 1,
+    "format": " {usage}%"
+  },
+  "mpd": {
+    "max-length": 25,
+    "format": "<span foreground='#bb9af7'></span> {title}",
+    "format-paused": " {title}",
+    "format-stopped": "<span foreground='#bb9af7'></span>",
+    "format-disconnected": "",
+    "on-click": "mpc --quiet toggle",
+    "on-click-right": "mpc ls | mpc add",
+    "on-click-middle": "kitty ncmpcpp",
+    "on-scroll-up": "mpc --quiet prev",
+    "on-scroll-down": "mpc --quiet next",
+    "smooth-scrolling-threshold": 5,
+    "tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
+  },
+  "network": {
+    "interval": 1,
+    "format-wifi": "說 {essid}",
+    "format-ethernet": "  {ifname} ({ipaddr})",
+    "format-linked": "說 {essid} (No IP)",
+    "format-disconnected": "說 Disconnected",
+    "tooltip": false
+  },
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon4/temp2_input",
+    //"critical-threshold": 80,
+    "tooltip": false,
+    "format": " {temperatureC}°C"
+  },
+  "custom/powermenu": {
+    "format": "",
+    "on-click": "~/.config/rofi/powermenu.sh",
+    "tooltip": false
+  },
+  "tray": {
+    "icon-size": 15,
+    "spacing": 5
+  },
+  "custom/pacman": {
+    "format": " {}",
+    "interval": 3600, // every hour
+    "exec": "checkupdates | wc -l", // # of updates
+    "exec-if": "exit 0", // always run; consider advanced run conditions
+    "exec-if": "checkupdates | wc -l > 0", // always run; consider advanced run conditions
+    /* "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system */
+    "on-click": "kitty yay -Syu",
+    "signal": 8
+  },
+  "custom/scratchpad-indicator": {
+    "interval": 3,
+    "return-type": "json",
+    "exec": "swaymsg -t get_tree | jq --unbuffered --compact-output '(recurse(.nodes[]) | select(.name == \"__i3_scratch\") | .focus) as $scratch_ids | [..  | (.nodes? + .floating_nodes?) // empty | .[] | select(.id |IN($scratch_ids[]))] as $scratch_nodes | if ($scratch_nodes|length) > 0 then { text: \"\\($scratch_nodes | length)\", tooltip: $scratch_nodes | map(\"\\(.app_id // .window_properties.class) (\\(.id)): \\(.name)\") | join(\"\\n\") } else empty end'",
+    "format": " {}",
+    "on-click": "exec swaymsg 'scratchpad show'",
+    "on-click-right": "exec swaymsg 'move scratchpad'"
+  },
+  "custom/weather": {
+    "format": "{}",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "~/.config/waybar/wabar-wttr.py",
+    "return-type": "json"
+  },
+  "custom/recording": {
+    "exec": "$XDG_CONFIG_HOME/waybar/scripts/recording.sh status",
+    "format": "{}",
+    "on-click": "$XDG_CONFIG_HOME/waybar/scripts/recording.sh toggle fullscreen",
+    "on-click-right": "$XDG_CONFIG_HOME/waybar/scripts/recording.sh toggle region",
+    "restart-interval": 1,
+    "return-type": "json",
+    "tooltip": true
+  },
+  "sway/language": {
+    "format": "{}",
+    "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+  },
+}

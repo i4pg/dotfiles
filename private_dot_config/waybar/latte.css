@@ -1,6 +1,4 @@
-/* @import "./themes/colors-waybar.css"; */
-/* @import "themes/mocha.css"; */
-@import "./mocha.css";
+@import "./waybar/themes/latte.css";
 
 /* Global */
 * {

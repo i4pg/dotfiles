@@ -1,37 +1,162 @@
-/*
-*
-* Catppuccin Mocha palette
-* Maintainer: rubyowo
-*
-*/
+@import "./waybar/themes/mocha.css";
 
-@define-color base   #1e1e2e;
-@define-color mantle #181825;
-@define-color crust  #11111b;
+/* Global */
+* {
+  font-family: "FiraCode Nerd Font";
+  font-size: .9rem;
+  border-radius: 1rem;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  background-color: shade(@base, 0.9);
+  color: @text;
+}
 
-@define-color text     #cdd6f4;
-@define-color subtext0 #a6adc8;
-@define-color subtext1 #bac2de;
+@keyframes blink_red {
+  to {
+    background-color: @red;
+    color: @base;
+  }
+}
 
-@define-color surface0 #313244;
-@define-color surface1 #45475a;
-@define-color surface2 #585b70;
+.warning, .critical, .urgent {
+  animation-name: blink_red;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
 
-@define-color overlay0 #6c7086;
-@define-color overlay1 #7f849c;
-@define-color overlay2 #9399b2;
+#mode, #clock, #memory, #temperature, #cpu, #custom-weather,
+#mpd, #idle_inhibitor, #backlight, #pulseaudio, #network, 
+#battery, #custom-powermenu, #custom-cava-internal,
+#custom-launcher, #tray, #disk, #custom-pacman, #custom-scratchpad-indicator {
+  padding-left: .6rem;
+  padding-right: .6rem;
+}
 
-@define-color blue      #89b4fa;
-@define-color lavender  #b4befe;
-@define-color sapphire  #74c7ec;
-@define-color sky       #89dceb;
-@define-color teal      #94e2d5;
-@define-color green     #a6e3a1;
-@define-color yellow    #f9e2af;
-@define-color peach     #fab387;
-@define-color maroon    #eba0ac;
-@define-color red       #f38ba8;
-@define-color mauve     #cba6f7;
-@define-color pink      #f5c2e7;
-@define-color flamingo  #f2cdcd;
-@define-color rosewater #f5e0dc;
+/* Bar */
+window#waybar {
+  background-color: transparent;
+}
+
+window > box {
+  background-color: transparent;
+  margin: .3rem;
+  margin-bottom: 0;
+}
+
+
+/* Workspaces */
+#workspaces:hover {
+  background-color: @rosewater;
+  border: none;
+}
+
+#workspaces button {
+  padding-right: .4rem;
+  padding-left: .4rem;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+  color: @text;
+  border: .2px solid transparent;
+  background: transparent;
+}
+
+#workspaces button.focused {
+  color: @red;
+}
+
+#workspaces button:hover {
+  border: .2px solid transparent;
+  color: @rosewater;
+}
+
+/* Tooltip */
+tooltip {
+  background-color: @base;
+}
+
+tooltip label {
+  color: @rosewater;
+}
+
+/* battery */
+#battery {
+  color: @mauve;
+}
+#battery.full {
+  color: @green;
+}
+#battery.charging{
+  color: @teal;
+}
+#battery.discharging {
+  color: @peach;
+}
+#battery.critical:not(.charging) {
+  color: @pink;
+}
+#custom-powermenu {
+  color: @red;
+}
+
+/* mpd */
+#mpd.paused {
+  color: @pink;
+  font-style: italic;
+}
+#mpd.stopped {
+  color: @rosewater;
+  /* background: transparent; */
+}
+#mpd {
+  color: @lavender;
+}
+
+/* Extra */
+#custom-cava-internal{
+  color: @peach;
+  padding-right: 1rem;
+}
+#custom-launcher {
+  color: @yellow;
+}
+#memory {
+  color: @peach;
+}
+#cpu {
+  color: @blue;
+}
+#clock {
+  color: @rosewater;
+}
+#idle_inhibitor {
+  color: @green;
+}
+#temperature {
+  color: @sapphire;
+}
+#backlight {
+  color: @green;
+}
+#pulseaudio {
+  color: @mauve;  /* not active */
+}
+#network {
+  color: @pink; /* not active */
+}
+#network.disconnected {
+  color: @foreground;  /* not active */
+}
+#disk {
+  color: @maroon;
+}
+#custom-pacman{
+  color: @sky;
+}
+#custom-scratchpad-indicator {
+  color: @yellow
+}
+#custom-weather {
+  color: @red;
+}
