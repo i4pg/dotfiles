@@ -381,6 +381,7 @@ lvim.plugins = {
     opt = true,
     run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
   },
+  { "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } },
 }
 
 
@@ -431,3 +432,4 @@ lvim.builtin.treesitter.rainbow.enable = true -- enable rainbow parentheses
 -- vim.opt.sidescrolloff = 8
 -- lvim.transparent_window = false
 -- lvim.builtin.lualine.style = "lvim" -- or "none"
+lvim.builtin.dap.active = true
