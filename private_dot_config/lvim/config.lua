@@ -434,6 +434,27 @@ lvim.builtin.treesitter.rainbow.enable = true -- enable rainbow parentheses
 -- lvim.builtin.lualine.style = "lvim" -- or "none"
 lvim.builtin.dap.active = true
 
+require("dap").adapters["pwa-node"] = {
+  type = "server",
+  host = "localhost",
+  port = "${port}",
+  executable = {
+    command = "node",
+    -- 💀 Make sure to update this path to point to your installation
+    args = { "~/projects/odin/foundations/js-debug/src/dapDebugServer.js", "${port}" },
+  }
+}
+
+require("dap").configurations.javascript = {
+  {
+    type = "pwa-node",
+    request = "launch",
+    name = "Launch file",
+    program = "${file}",
+    cwd = "${workspaceFolder}",
+  },
+}
+
 require("dap-vscode-js").setup({
   -- node_path = "node", -- Path of node executable. Defaults to $NODE_PATH, and then "node"
   -- debugger_path = "(runtimedir)/site/pack/packer/opt/vscode-js-debug", -- Path to vscode-js-debug installation.
