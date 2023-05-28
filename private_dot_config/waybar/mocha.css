@@ -8,7 +8,6 @@
   transition-property: background-color;
   transition-duration: 0.5s;
   background-color: shade(@base, 0.9);
-  color: @text;
 }
 
 @keyframes blink_red {
@@ -48,8 +47,7 @@ window > box {
 
 /* Workspaces */
 #workspaces:hover {
-  background-color: @rosewater;
-  border: none;
+  background-color: @green;
 }
 
 #workspaces button {
@@ -57,17 +55,17 @@ window > box {
   padding-left: .4rem;
   padding-top: .1rem;
   padding-bottom: .1rem;
-  color: @text;
-  border: .2px solid transparent;
+  color: @red;
+  /* border: .2px solid transparent; */
   background: transparent;
 }
 
 #workspaces button.focused {
-  color: @red;
+  color: @blue;
 }
 
 #workspaces button:hover {
-  border: .2px solid transparent;
+  /* border: .2px solid transparent; */
   color: @rosewater;
 }
 
