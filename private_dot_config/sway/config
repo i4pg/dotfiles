@@ -75,7 +75,7 @@ exec_always  --no-startup-id  cava -p ~/.config/cava/config1 | sed -u 's/;//g;s/
 exec dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus &
 exec mako
 exec_always  --no-startup-id  swww init &
-exec_always  --no-startup-id  swww img ~/Downloads/mocha-noise4-wallhaven-5g5jq7_1366x768.png
+exec_always  --no-startup-id  swww img ~/Downloads/mocha-noise4-wallhaven-5gwmd3_3840x2160.png
 exec  --no-startup-id  fcitx5 -d
 exec_always  --no-startup-id  nm-applet --indicator &
 exec_always  --no-startup-id  syncthing &
