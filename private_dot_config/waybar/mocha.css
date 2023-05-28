@@ -63,6 +63,7 @@ window > box {
 }
 
 #workspaces button.focused {
+background-color: @flamingo;
   color: @red;
 }
 
