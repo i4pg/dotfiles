@@ -63,7 +63,7 @@ window > box {
 }
 
 #workspaces button.focused {
-  color: @red !important;
+  color: @red;
 }
 
 #workspaces button:hover {
