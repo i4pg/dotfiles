@@ -284,7 +284,7 @@ alias psmem='ps auxf | sort -nr -k 4'
 alias pscpu='ps auxf | sort -nr -k 3'
 
 # Merge Xresources
-alias merge='xrdb -merge ~/.Xresources'
+# alias merge='xrdb -merge ~/.Xresources'
 
 # git
 alias addup='git add -u'
@@ -298,6 +298,7 @@ alias pull='git pull origin'
 alias push='git push origin'
 alias tag='git tag'
 alias newtag='git tag -a'
+alias merge= 'git merge'
 
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
