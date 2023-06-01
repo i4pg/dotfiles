@@ -45,6 +45,10 @@
 + **Reader**							• [`zathura`](https://pwmt.org/projects/zathura/) 
 + **Browser**						• [`firefox`](https://www.mozilla.org/en-US/firefox/new/)
 
+### Catppuccin Latte for light mode / Mocha for dark mode
+  <img src="assets/2023-06-01T12:59:47_no_watermark.png" alt="minimal" align="right" width="500px"/>
+  _Clicking on waybar clock will switch between latte/mocha scheme_
+
 &nbsp;
 
 <p align="center"><img src="assets/gray0_ctp_on_line.svg?sanitize=true" /></p>
