@@ -54,23 +54,27 @@
 1.  First you need to install [`chezmoi`](https://www.chezmoi.io/install/)
 
 ```console
+$ sh -c "$(curl -fsLS get.chezmoi.io)" # cURL
+
+$ sh -c "$(wget -qO- get.chezmoi.io)" # wGET
+
 $ pacman -S chezmoi # Arch 
 
 $ apk add chezmoi # Alpine
 
-$ nix-env -i chezmoi # NixOS
+$ nix-env -i chezmoi # NixOS & Nix
 
 $ zypper install chezmoi # openSUSE Tumbleweed
 
-$ pkg install chezmoi # Termux
+$ pkg install chezmoi # Termux & FreeBSD
 
 $ xbps-install -S chezmoi # Void
 
-$ brew install chezmoi # brew
+$ brew install chezmoi # MacOS - Homebrew
 
-$ sh -c "$(curl -fsLS get.chezmoi.io)" # cURL
+$ choco install chezmoi # Windows - Chocolatey
 
-$ sh -c "$(wget -qO- get.chezmoi.io)" # wGET
+$ snap install chezmoi --classic # Snap
 ```
 
 2.  Initialize chezmoi with your dotfiles directory:
