@@ -118,8 +118,9 @@ $ chezmoi update -v
 
 ## To-do
 
-- [ ] configure [`wofi`](https://man.archlinux.org/man/wofi.1.en)
+- [x] Dark/Light mode
 - [ ] switch `waybar` script also changes `sway` wallpaper using `swww`
+- [ ] configure [`wofi`](https://man.archlinux.org/man/wofi.1.en)
 
 > NOTE: If you've got any awesome ideas or suggestions, please drop a pull request. Let's collaborate and make this project visually stunning together! 🎨✨
 
