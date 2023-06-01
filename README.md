@@ -38,6 +38,7 @@
 + **Editor**						• [`lvim`](https://www.lunarvim.org/)
 + **Theme**							• [`catppuccin`](https://catppuccin.com/)
 + **Color Scheme**					• [`Mocha`](https://catppuccin.com/) 
++ **Daemon**					• [`Swww`](https://github.com/Horus645/swww) 
 + **Wallpapers**						• [`Here`](https://discord.com/channels/907385605422448742/1111932660651135006) 
 + **Resource monitor**				• [`btm`](https://github.com/ClementTsang/bottom)
 + **File Manager**							• [`fm`](https://github.com/knipferrc/fm)
@@ -118,6 +119,14 @@ you can pull and apply the latest changes from this repo with:
 ```console
 $ chezmoi update -v
 ```
+
+## To-do
+
+- [ ] configure [`wofi`](https://man.archlinux.org/man/wofi.1.en)
+- [ ] switch `waybar` script also change `sway` wallpaper using `swww`
+
+> NOTE: If you've got any awesome ideas or suggestions, please drop a pull request. Let's collaborate and make this project visually stunning together! 🎨✨
+
 ## Contributing
 
 Contributions to this project are welcome. To contribute, follow these steps:
