@@ -1,28 +1,29 @@
 <h1 align="center">
-:space_invader: Aesthetic Dynamic SwayWM Environment
 </h1>
 
-![2023-01-17](assest/one_peice.jpg)
+<h3 align="center">
+	<img src="assest/1544x1544_circle.png" width="100" alt="Logo"/><br/>
+    :space_invader: Aesthetic SwayWM catppuccin Environment
+</h3>
 
 <p align="center">
-<a href="#Configuration-computer"><img width="180" style="padding: 5px 5px;" src="https://user-images.githubusercontent.com/85732279/124286209-3646d880-db3e-11eb-9340-f5a1d2e6308d.png"></a>
-<a href="#Installation-memo"><img width="180" style="padding: 5px 5px;" src="https://user-images.githubusercontent.com/85732279/124286296-51b1e380-db3e-11eb-83e3-87bff363e114.png"></a>
-<a href="#Keybinds"><img width="180" style="padding: 5px 5px;" src="https://user-images.githubusercontent.com/85732279/124286410-71e1a280-db3e-11eb-9a5f-d53644a16e36.png"></a>
+  <img src="assest/macchiato.png" width="400" />
 </p>
-<hr>
-
 
 <p align="center">
-This is a seamless configuration, where everything just works, but only for me. It is not inteded to be used as a 'starter' config, though there are some really cool snippets/configs that everyone can use, please refer to //TODO!
+	<a href="https://github.com/i4pg/dotfiles/stargazers">
+		<img alt="Stargazers" src="https://img.shields.io/github/stars/i4pg/dotfiles?style=for-the-badge&logo=starship&color=C9CBFF&logoColor=D9E0EE&labelColor=302D41"></a>
+	<a href="https://github.com/i4pg/dotfiles/releases/latest">
+		<img alt="Issues" src="https://img.shields.io/github/issues/i4pg/dotfiles?style=for-the-badge&logo=gitbook&color=B5E8E0&logoColor=D9E0EE&labelColor=302D41"></a>
+        <img alt="" align="right" src="https://img.shields.io/github/repo-size/i4pg/dotfiles?style=for-the-badge&logo=github&color=F2CDCD&logoColor=D9E0EE&labelColor=302D41"/>
+        <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=302d41&colorB=b7bdf8"/></a></p>
+
 </p>
 
+## Configuration :computer:
 
-## Configuration :computer:<img alt="" align="right" src="https://img.shields.io/github/repo-size/i4pg/dotfiles?style=for-the-badge"/>
-
-  <!-- <img href="what about this?" src="./assest/image_top.png" alt="minimal" align="center" /> -->
-  <img src="./assest/image_afternoon.png" alt="minimal" align="right" width="500px"/>
-  <img src="assest/image_3.png" alt="minimal" align="right" width="500px"/>
-  <img src="./assest/morning.png" alt="minimal" align="right" width="500px"/>
+  <img src="assest/2023-06-01T09:04:30_no_watermark.png" alt="minimal" align="right" width="500px"/>
+  <img src="assest/2023-06-01T09:38:56_no_watermark.png" alt="minimal" align="right" width="500px"/>
 
 :octocat: _Those are some details about my setup_
 
@@ -35,16 +36,16 @@ This is a seamless configuration, where everything just works, but only for me. 
 + **Terminal**						• [`kitty`](https://sw.kovidgoyal.net/kitty/) 
 + **Editor**						• [`lvim`](https://www.lunarvim.org/)
 + **Theme**							• [`catppuccin`](https://catppuccin.com/)
-+ **Color Scheme**					• [`pywall`](https://github.com/dylanaraps/pywal) 
-+ **Wallpapers**						• [`dwall`](https://github.com/adi1090x/dynamic-wallpaper) 
++ **Color Scheme**					• [`Mocha`](https://catppuccin.com/) 
++ **Wallpapers**						• [`Here`](https://discord.com/channels/907385605422448742/1111932660651135006) 
 + **Resource monitor**				• [`btm`](https://github.com/ClementTsang/bottom)
 + **File Manager**							• [`fm`](https://github.com/knipferrc/fm)
 + **Fuzzy finder**					• [`fzf`](https://github.com/junegunn/fzf) 
-+ **Dotfiles Manager**						• [`chezmoi`](https://www.chezmoi.io/)
++ **.files Manager**						• [`chezmoi`](https://www.chezmoi.io/)
 + **System information**			• [`neofetch`](https://github.com/dylanaraps/neofetch)
 + **Reader**							• [`zathura`](https://pwmt.org/projects/zathura/) 
 + **Browser**						• [`firefox`](https://www.mozilla.org/en-US/firefox/new/)
 
-## Thanks to…
+&nbsp;
 
-* @flinner for [stolen his README](https://github.com/flinner/dots) 💜
+<p align="center"><img src="assest/gray0_ctp_on_line.svg?sanitize=true" /></p>
