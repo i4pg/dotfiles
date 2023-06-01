@@ -18,17 +18,17 @@
 
 ## Dark/Light mode :waxing_crescent_moon:
 
-  <img src="assets/2023-06-01T12:59:47_no_watermark.png" alt="minimal" align="right" width="500px"/>
-  <img src="assets/2023-06-01T09:04:30_no_watermark.png" alt="minimal" align="right" width="500px"/>
-
 > _left-click on waybar clock switches between latte/mocha scheme_
+
+  <img src="assets/2023-06-01T12:59:47_no_watermark.png" />
+  <img src="assets/2023-06-01T09:04:30_no_watermark.png" />
+
+----------
 
 ## Configuration :computer:
 
-  <img src="assets/2023-06-01T09:38:56_no_watermark.png" alt="minimal" align="right" width="500px"/>
-  <img src="assets/2023-06-01T09:04:30_no_watermark.png" alt="minimal" align="right" width="500px"/>
-
-:octocat: _Those are some details about my setup_
+  <img src="assets/2023-06-01T09:38:56_no_watermark.png" />
+  <img src="assets/2023-06-01T09:04:30_no_watermark.png" />
 
 + **OS**							• [`arch`](https://archlinux.org/)
 + **WM**							• [`sway`](https://swaywm.org/)
@@ -48,29 +48,25 @@
 + **System information**			• [`neofetch`](https://github.com/dylanaraps/neofetch)
 + **Reader**							• [`zathura`](https://pwmt.org/projects/zathura/) 
 + **Browser**						• [`firefox`](https://www.mozilla.org/en-US/firefox/new/)
+
+----------
   
 ## Installation
--   first you need to install [`chezmoi`](https://www.chezmoi.io/)
+-   first you need to install [`chezmoi`](https://www.chezmoi.io/install/)
+
+```console
+$ pacman -S chezmoi
+```
 
 -   initialize chezmoi with your dotfiles directory:
+
+>   This will check out the repo and any submodules and optionally create a chezmoi config file for you.
 
 ```console
 $ chezmoi init https://github.com/i4pg/dotfiles.git
 ```
 
-!!! hint
-
-    Private GitHub repos requires other
-    [authentication methods](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls):
-
-    ```console
-    $ chezmoi init git@github.com:i4pg/dotfiles.git
-    ```
-
-This will check out the repo and any submodules and optionally create a chezmoi
-config file for you.
-
--   Check what changes that chezmoi will make to your home directory by running:
+-   Check what changes that chezmoi will make to your directory by running:
 
 ```console
 $ chezmoi diff
@@ -98,7 +94,7 @@ $ chezmoi merge $FILE
 
 ### Update
 
--   you can pull and apply the latest changes from your repo with:
+-   you can pull and apply the latest changes from this repo with:
 
 ```console
 $ chezmoi update -v
