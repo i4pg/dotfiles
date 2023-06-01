@@ -3,7 +3,7 @@
 
 <h3 align="center">
 	<img src="assest/1544x1544_circle.png" width="100" alt="Logo"/><br/>
-    :space_invader: Aesthetic SwayWM catppuccin Environment
+    :space_invader: Aesthetic SwayWM Catppuccin Environment
 </h3>
 
 <p align="center">
@@ -13,17 +13,16 @@
 <p align="center">
 	<a href="https://github.com/i4pg/dotfiles/stargazers">
 		<img alt="Stargazers" src="https://img.shields.io/github/stars/i4pg/dotfiles?style=for-the-badge&logo=starship&color=C9CBFF&logoColor=D9E0EE&labelColor=302D41"></a>
-	<a href="https://github.com/i4pg/dotfiles/releases/latest">
+	<a href="https://github.com/i4pg/dotfiles/issues">
 		<img alt="Issues" src="https://img.shields.io/github/issues/i4pg/dotfiles?style=for-the-badge&logo=gitbook&color=B5E8E0&logoColor=D9E0EE&labelColor=302D41"></a>
-        <img alt="" align="right" src="https://img.shields.io/github/repo-size/i4pg/dotfiles?style=for-the-badge&logo=github&color=F2CDCD&logoColor=D9E0EE&labelColor=302D41"/>
-        <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=302d41&colorB=b7bdf8"/></a></p>
-
+        <img alt="Size" src="https://img.shields.io/github/repo-size/i4pg/dotfiles?style=for-the-badge&logo=github&color=F2CDCD&logoColor=D9E0EE&labelColor=302D41"/>
+        <img alt="license" src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=302d41&colorB=b7bdf8"/></p>
 </p>
 
 ## Configuration :computer:
 
-  <img src="assest/2023-06-01T09:04:30_no_watermark.png" alt="minimal" align="right" width="500px"/>
   <img src="assest/2023-06-01T09:38:56_no_watermark.png" alt="minimal" align="right" width="500px"/>
+  <img src="assest/2023-06-01T09:04:30_no_watermark.png" alt="minimal" align="right" width="500px"/>
 
 :octocat: _Those are some details about my setup_
 
