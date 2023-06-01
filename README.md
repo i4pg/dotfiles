@@ -51,13 +51,13 @@
   
 ## Installation
 
-First you need to install [`chezmoi`](https://www.chezmoi.io/install/)
+1.  First you need to install [`chezmoi`](https://www.chezmoi.io/install/)
 
 ```console
 $ pacman -S chezmoi
 ```
 
-Initialize chezmoi with your dotfiles directory:
+2.  Initialize chezmoi with your dotfiles directory:
 
 >   This will check out the repo and any submodules and optionally create a chezmoi config file for you.
 
@@ -65,25 +65,25 @@ Initialize chezmoi with your dotfiles directory:
 $ chezmoi init https://github.com/i4pg/dotfiles.git
 ```
 
-Check what changes that chezmoi will make to your directory by running:
+3.  Check what changes that chezmoi will make to your directory by running:
 
 ```console
 $ chezmoi diff
 ```
 
-If you are happy with the changes that chezmoi will make then run:
+4.  If you are happy with the changes that chezmoi will make then run:
 
 ```console
 $ chezmoi apply -v
 ```
 
-If you are not happy with the changes to a file then either edit it with:
+5.  If you are not happy with the changes to a file then either edit it with:
 
 ```console
 $ chezmoi edit $FILE
 ```
 
-Or, invoke a merge tool (by default `vimdiff`) to merge changes between the
+6.  Or, invoke a merge tool (by default `vimdiff`) to merge changes between the
 current contents of the file, the file in your working copy, and the computed
 contents of the file:
 
@@ -98,6 +98,32 @@ you can pull and apply the latest changes from this repo with:
 ```console
 $ chezmoi update -v
 ```
+## Contributing
+
+Contributions to this project are welcome. To contribute, follow these steps:
+
+1.  Fork this repository.
+    
+2.  Create a new branch with your changes:
+    
+    ```console
+    git checkout -b my-new-branch
+    ```
+3.  Make your changes and commit them:
+    
+    ```console
+    git commit -am 'Add some feature'`
+    ```
+4.  Push your changes to your forked repository:
+    
+    ```console
+    git push origin my-new-branch`
+    ```
+5.  Create a pull request on this repository.
+    
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 &nbsp;
 
