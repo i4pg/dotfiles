@@ -45,7 +45,7 @@
 + **Reader**							• [`zathura`](https://pwmt.org/projects/zathura/) 
 + **Browser**						• [`firefox`](https://www.mozilla.org/en-US/firefox/new/)
 
-### Dark/Light mode
+## Dark/Light mode :waxing_crescent_moon:
 
   <img src="assets/2023-06-01T12:59:47_no_watermark.png" alt="minimal" align="right" width="500px"/>
 
