@@ -32,21 +32,17 @@
 + **WM**							• [`sway`](https://swaywm.org/)
 + **Bar**							• [`waybar`](https://github.com/Alexays/Waybar)
 + **Launcher**						• [`wofi`](https://man.archlinux.org/man/wofi.1.en)
++ **Theme**							• [`catppuccin`](https://catppuccin.com/)
 + **Font**							• [`Fira Code (Nerd)`](https://github.com/ryanoasis/nerd-fonts)
 + **Shell**							• [`fish`](https://fishshell.com/) 
 + **Terminal**						• [`kitty`](https://sw.kovidgoyal.net/kitty/) 
-+ **Editor**						• [`lvim`](https://www.lunarvim.org/)
-+ **Theme**							• [`catppuccin`](https://catppuccin.com/)
-+ **Color Scheme**					• [`Mocha`](https://catppuccin.com/) 
++ **Editor**						• [`LunarVim`](https://www.lunarvim.org/)
 + **Daemon**					• [`Swww`](https://github.com/Horus645/swww) 
-+ **Wallpapers**						• [`Here`](https://discord.com/channels/907385605422448742/1111932660651135006) 
 + **Resource monitor**				• [`btm`](https://github.com/ClementTsang/bottom)
 + **File Manager**							• [`fm`](https://github.com/knipferrc/fm)
-+ **Fuzzy finder**					• [`fzf`](https://github.com/junegunn/fzf) 
-+ **Dotfiles Manager**						• [`chezmoi`](https://www.chezmoi.io/)
-+ **System information**			• [`neofetch`](https://github.com/dylanaraps/neofetch)
 + **Reader**							• [`zathura`](https://pwmt.org/projects/zathura/) 
 + **Browser**						• [`firefox`](https://www.mozilla.org/en-US/firefox/new/)
++ **Wallpapers**						• [`Here`](https://discord.com/channels/907385605422448742/1111932660651135006) 
 
 ----------
   
@@ -123,7 +119,7 @@ $ chezmoi update -v
 ## To-do
 
 - [ ] configure [`wofi`](https://man.archlinux.org/man/wofi.1.en)
-- [ ] switch `waybar` script also change `sway` wallpaper using `swww`
+- [ ] switch `waybar` script also changes `sway` wallpaper using `swww`
 
 > NOTE: If you've got any awesome ideas or suggestions, please drop a pull request. Let's collaborate and make this project visually stunning together! 🎨✨
 
