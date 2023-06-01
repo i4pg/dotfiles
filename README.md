@@ -16,7 +16,6 @@
         <img alt="license" src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=302d41&colorB=b7bdf8"/></p>
 </p>
 
-# New feature :stars:
 ## Dark/Light mode :waxing_crescent_moon:
 
   <img src="assets/2023-06-01T12:59:47_no_watermark.png" alt="minimal" align="right" width="500px"/>
