@@ -18,17 +18,15 @@
 
 ## Dark/Light mode :waxing_crescent_moon:
 
-> _left-click on waybar clock switches between latte/mocha scheme_
-
-  <img src="assets/2023-06-01T12:59:47_no_watermark.png" />
+  <img src="assets/2023-06-01T09:38:56_no_watermark.png" />
   <img src="assets/2023-06-01T09:04:30_no_watermark.png" />
+  <img src="assets/2023-06-01T12:59:47_no_watermark.png" />
+
+> _left-click on waybar clock switches between latte/mocha scheme_
 
 ----------
 
 ## Configuration :computer:
-
-  <img src="assets/2023-06-01T09:38:56_no_watermark.png" />
-  <img src="assets/2023-06-01T09:04:30_no_watermark.png" />
 
 + **OS**							• [`arch`](https://archlinux.org/)
 + **WM**							• [`sway`](https://swaywm.org/)
@@ -52,13 +50,14 @@
 ----------
   
 ## Installation
--   first you need to install [`chezmoi`](https://www.chezmoi.io/install/)
+
+First you need to install [`chezmoi`](https://www.chezmoi.io/install/)
 
 ```console
 $ pacman -S chezmoi
 ```
 
--   initialize chezmoi with your dotfiles directory:
+Initialize chezmoi with your dotfiles directory:
 
 >   This will check out the repo and any submodules and optionally create a chezmoi config file for you.
 
@@ -66,25 +65,25 @@ $ pacman -S chezmoi
 $ chezmoi init https://github.com/i4pg/dotfiles.git
 ```
 
--   Check what changes that chezmoi will make to your directory by running:
+Check what changes that chezmoi will make to your directory by running:
 
 ```console
 $ chezmoi diff
 ```
 
--   If you are happy with the changes that chezmoi will make then run:
+If you are happy with the changes that chezmoi will make then run:
 
 ```console
 $ chezmoi apply -v
 ```
 
--   If you are not happy with the changes to a file then either edit it with:
+If you are not happy with the changes to a file then either edit it with:
 
 ```console
 $ chezmoi edit $FILE
 ```
 
--   Or, invoke a merge tool (by default `vimdiff`) to merge changes between the
+Or, invoke a merge tool (by default `vimdiff`) to merge changes between the
 current contents of the file, the file in your working copy, and the computed
 contents of the file:
 
@@ -94,7 +93,7 @@ $ chezmoi merge $FILE
 
 ### Update
 
--   you can pull and apply the latest changes from this repo with:
+you can pull and apply the latest changes from this repo with:
 
 ```console
 $ chezmoi update -v
