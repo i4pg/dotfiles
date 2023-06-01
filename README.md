@@ -2,12 +2,12 @@
 </h1>
 
 <h3 align="center">
-	<img src="assest/1544x1544_circle.png" width="100" alt="Logo"/><br/>
+	<img src="assets/1544x1544_circle.png" width="100" alt="Logo"/><br/>
     :space_invader: Aesthetic SwayWM Catppuccin Environment
 </h3>
 
 <p align="center">
-  <img src="assest/macchiato.png" width="400" />
+  <img src="assets/macchiato.png" width="400" />
 </p>
 
 <p align="center">
@@ -21,8 +21,8 @@
 
 ## Configuration :computer:
 
-  <img src="assest/2023-06-01T09:38:56_no_watermark.png" alt="minimal" align="right" width="500px"/>
-  <img src="assest/2023-06-01T09:04:30_no_watermark.png" alt="minimal" align="right" width="500px"/>
+  <img src="assets/2023-06-01T09:38:56_no_watermark.png" alt="minimal" align="right" width="500px"/>
+  <img src="assets/2023-06-01T09:04:30_no_watermark.png" alt="minimal" align="right" width="500px"/>
 
 :octocat: _Those are some details about my setup_
 
@@ -47,4 +47,4 @@
 
 &nbsp;
 
-<p align="center"><img src="assest/gray0_ctp_on_line.svg?sanitize=true" /></p>
+<p align="center"><img src="assets/gray0_ctp_on_line.svg?sanitize=true" /></p>
