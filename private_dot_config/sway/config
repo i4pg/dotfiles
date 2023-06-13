@@ -13,12 +13,12 @@ smart_borders on
 
 # assign 		[app_id="librewolf"] 		    1
 # assign 		[app_id="org.pwmt.zathura"] 4
-assign 		[class="Spotify"] 		    3
+# assign 		[class="Spotify"] 		    3
 
 set $mod Mod4
 set $term kitty
 set $menu wofi --show drun
-set $browser firefox
+set $browser brave --ozone-platform=wayland
 set $file-manager kitty fm
 set $left  h
 set $down  j
