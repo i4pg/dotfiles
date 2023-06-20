@@ -7,8 +7,10 @@ set -U fish_user_paths $HOME/.local/bin  $fish_user_paths
 set -U fish_user_paths /usr/share/sway/scripts/ $fish_user_paths
 set -Ux fish_user_paths $HOME/.config/.rbenv/bin $fish_user_paths # rbenv
 set -Ua fish_user_paths $HOME/.cargo/bin  # Rust
+set -Ux fish_user_paths $FLYCTL_INSTALL/bin:$PATH
 set -Ux EDITOR lvim
 set -Ux JEKYLL_EDITOR lvim
+set -Ux FLYCTL_INSTALL $HOME/.fly
 
 # source ~/.config/fish/themes/kanagawa.conf #
 
