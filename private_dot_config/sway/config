@@ -1,4 +1,5 @@
 # include "$HOME/.cache/wal/colors-sway"
+
 include catppuccin-mocha
 
 xwayland enable
