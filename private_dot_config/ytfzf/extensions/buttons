@@ -1,0 +1,102 @@
+#!/usr/bin/env sh
+
+#shellcheck disable=SC2154
+#shellcheck disable=SC2034
+
+BUTTONS_old_url_handler=$url_handler
+
+bool_to_word () {
+    case "$1" in
+	1) echo "ON" ;;
+	0) echo "OFF" ;;
+    esac
+}
+
+post_scrape_buttons () {
+    [ "$enable_back_button" -eq 0 ] && return 0
+    data="$(cat "$ytfzf_video_json_file")"
+    [ "$is_audio_only" -eq 1 ] && toggle_audio_id=OFF || toggle_audio_id=ON
+    [ "$url_handler" = "downloader" ] && toggle_download_id=OFF || toggle_download_id=ON
+    [ "$is_detach" -eq "1" ] && toggle_detach_id=OFF || toggle_detach_id=ON
+    [ "$show_thumbnails" -eq 1 ] && toggle_thumbnails_id=OFF || toggle_thumbnails_id=ON
+    echo \
+	'[{"ID": "DOWNLOAD-'"$toggle_download_id"'", "date": "now", "title": "['"SET DOWNLOAD $toggle_download_id"']", "url": "download", "action": "set-download"},' \
+	'{"ID": "AUDIO-'"$toggle_audio_id"'", "date": "now", "title": "[SET AUDIO ONLY '"$toggle_audio_id"']", "url": "audio", "action": "set-audio"},' \
+	'{"ID": "DETACH-'"$toggle_detach_id"'", "date": "now", "title": "[SET DETACH '"$toggle_detach_id"']", "url": "detach", "action": "set-detach"},' \
+	'{"ID": "THUMBNAILS-'"$toggle_thumbnails_id"'", "date": "now", "title": "[SET THUMBNAILS '"$toggle_thumbnails_id"']", "url": "thumbnails", "action": "set-thumbnails"}]' \
+	"$data" > "$ytfzf_video_json_file"
+}
+
+handle_custom_action_set_download () {
+    if ! [ "$url_handler" = "downloader" ]; then
+	data="$(jq '[.[]|select(.ID=="DOWNLOAD-ON") = {
+	    "ID": "DOWNLOAD-OFF",
+	    "date": "now",
+	    "title": "[SET DOWNLOAD OFF]",
+	    "url": "download",
+	    "action": "set-download"
+	}]' < "$ytfzf_video_json_file")"
+	BUTTONS_old_url_handler=$url_handler
+	url_handler=downloader
+    else
+	data="$(jq '[.[]|select(.ID=="DOWNLOAD-OFF") = {
+	    "ID": "DOWNLOAD-ON",
+	    "date": "now",
+	    "title": "[SET DOWNLOAD ON]",
+	    "url": "download",
+	    "action": "set-download"
+	}]' < "$ytfzf_video_json_file")"
+	url_handler=$BUTTONS_old_url_handler
+    fi
+    echo "$data" > "$ytfzf_video_json_file"
+    return 1 #continue
+}
+
+handle_custom_action_set_audio () {
+    old_state="$(bool_to_word $is_audio_only)"
+    is_audio_only=$((is_audio_only^1))
+    new_state="$(bool_to_word $is_audio_only)"
+    data="$(jq '[.[]|select(.ID=="AUDIO-'"$new_state"'") = {
+	"ID": "AUDIO-'"$old_state"'",
+	"date": "now",
+	"title": "[SET AUDIO ONLY '"$old_state"']",
+	"url": "audio",
+	"action": "set-audio"
+    }]' < "$ytfzf_video_json_file")"
+    echo "$data" > "$ytfzf_video_json_file"
+    return 1 #continue
+}
+
+handle_custom_action_set_detach () {
+    old_state="$(bool_to_word $is_detach)"
+    is_detach=$((is_detach^1))
+    new_state="$(bool_to_word $is_detach)"
+    data="$(jq '[.[]|select(.ID=="DETACH-'"$new_state"'") = {
+	"ID": "DETACH-'"$old_state"'",
+	"date": "now",
+	"title": "[SET DETACH '"$old_state"']",
+	"url": "detach",
+	"action": "set-detach"
+    }]' < "$ytfzf_video_json_file")"
+    echo "$data" > "$ytfzf_video_json_file"
+    return 1 #continue
+}
+
+handle_custom_action_set_thumbnails () {
+    old_state="$(bool_to_word $show_thumbnails)"
+    show_thumbnails=$((show_thumbnails^1))
+    new_state="$(bool_to_word $show_thumbnails)"
+    data="$(jq '[.[]|select(.ID=="THUMBNAILS-'"$new_state"'") = {
+	"ID": "THUMBNAILS-'"$old_state"'",
+	"date": "now",
+	"title": "[SET THUMBNAILS '"$old_state"']",
+	"url": "thumbnails",
+	"action": "set-thumbnails"
+    }]' < "$ytfzf_video_json_file")"
+    echo "$data" > "$ytfzf_video_json_file"
+    return 1 #continue
+}
+
+print_help_buttons () {
+    printf "%s\n" "Adds buttons that toggle audio_only, detach, etc..." "use --disable-back or set enable_back_button to 0 to disable this extension"
+}

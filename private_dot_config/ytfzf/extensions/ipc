@@ -1,0 +1,65 @@
+#!/usr/bin/env sh
+
+#shellcheck disable=SC2154
+#shellcheck disable=SC2034
+
+
+on_post_set_vars_ipc () {
+    old_interface=$interface
+    interface=ipc
+}
+
+search_prompt_menu_ipc () {
+    interface=$old_interface search_prompt_menu_wrapper
+}
+
+quick_menu_ipc (){
+    interface=$old_interface quick_menu_wrapper
+}
+
+open_ipc () {
+    ! [ -p "$ipc_file" ] && mkfifo "$ipc_file"
+}
+
+close_ipc () {
+    kill "$(cat "$session_temp_dir/ipc__handle_ipc_id")"
+    [ -p "$ipc_file" ] && rm -f "$ipc_file".*
+}
+
+on_opt_parse_ipci () {
+    ipc_interface=$optarg
+}
+
+handle_ipc () {
+    while :; do
+	while read -r line; do
+	    if printf "%s" "$line" | grep -q '[!@#\$%\^&\*(\-\[\];:"'"'"',\./]'; then
+		echo "INVALID COMMAND: \"$line\" CONTAINS WEIRD CHARS" > "${ipc_file}.out"
+		break
+	    fi
+	    case "$line" in
+		(get*)
+		    eval "echo \$${line#get }" > "${ipc_file}.${line#get }" ;;
+		*)
+		    echo "INVALID COMMAND: \"$line\"" > "${ipc_file}.out" ;;
+	    esac
+	done < "$ipc_file"
+    done
+}
+
+interface_ipc () {
+    [ "$old_interface" = "ipc" ] && die 1 "You are doing something weird\n"
+    export ipc_file="$session_cache_dir/ipc"
+    open_ipc
+    handle_ipc &
+    echo "$!" > "${session_temp_dir}/ipc__handle_ipc_id"
+    $(printf "%s" "interface_$old_interface" | sed 's/-/_/g' | sed 's/^interface_$/interface_text/') "$@"
+    close_ipc
+}
+
+print_help_ipc() {
+    printf "%s\n" "Opens an ipc file to write to be able to read variables
+eg:
+echo 'get is_audio_only' > \$session_cache_dir/ipc
+cat \$session_cache_dir/ipc.is_audio_only"
+}

@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+[ -z "$BASH_VERSION" ] && {
+    die 3 "It appears you are not running bash\nMake sure /bin/sh points to the bash shell\n"
+}
+
+run_interface () {
+    local _interface="interface_${interface:-text}"
+    ${_interface//-/_} "$ytfzf_video_json_file" "$ytfzf_selected_urls"
+}
+
+add_commas () {
+    read -r num
+    printf "%'d" "$num"
+    unset num
+}
+
+get_key_value () {
+    local sep="${3:- }"
+    local value="${1##*"${sep}""${2}"=}"
+    printf -v KEY_VALUE "%s" "${value%%"${sep}"*}"
+    printf "%s" "$KEY_VALUE"
+    unset value
+    [ "$KEY_VALUE" ]
+    return "$?"
+}
+
+title_str () {
+    printf "%s\n" "${1^}"
+}
+
+search_prompt_menu () {
+    #shellcheck disable=SC2154
+    parse_search_hist_file < "$search_hist_file" > "$search_hist_file.bash"
+    HISTFILE="$search_hist_file.bash"
+    printf "Search\n" > /dev/stderr
+    history -r
+    read -p "> " -er _search
+    _search="$(history -p "$_search")"
+    history -s "$_search"
+    history -a
+    printf "\033[1A\033[K\r%s\n" "> $_search" > /dev/stderr
+    rm "$HISTFILE"
+}
+
+generic_wrapper () {
+    local _base_name="$1"
+    shift
+    fn_name="${_base_name}${interface:+_${interface//-/_}}"
+    if command_exists "$fn_name"; then
+        print_debug "[INTERFACE]: Running menu function: $fn_name\n"
+        $fn_name "$@"
+    else
+        print_debug "[INTERFACE]: Menu function $fn_name did not exist, falling back to ${_base_name}_ext\n"
+        "${_base_name}_ext" "$@"
+    fi
+}
+
+detach_cmd () {
+    "$@" & disown
+}

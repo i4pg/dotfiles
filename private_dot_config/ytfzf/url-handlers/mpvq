@@ -1,0 +1,38 @@
+#!/bin/sh
+# in detach mode (e. g. via `--detach`) urls are being
+# appended to mpv playlist instead of being played immediately
+#
+# usage:
+#  append --url-handler=mpvq to ytfzf args
+mpv_socket=${TMPDIR:-/tmp}/${USER}-ytfzf-mpv-socket
+
+die () {
+    printf "\033[31m$2\033[0m"
+    exit "$1"
+}
+command_exists () {
+    command -v "$1" > /dev/null 2>&1
+}
+
+
+
+for dep in lsof mpv socat; do
+    command_exists "$dep" || die 3 "$dep is not installed and is required for the mpvq url handler\n"
+done
+
+IFS="$(printf '\t')"
+read -r ytdl_pref is_audio_only is_detach video_pref audio_pref url_handler_opts _
+unset IFS
+
+case "$is_detach" in
+    0*) /usr/bin/mpv $fs "$@"
+	;;
+    1*) lsof "${mpv_socket}" >/dev/null 2>&1
+	if [ $? -ne 0 ]
+	then
+	  /usr/bin/mpv $fs --input-ipc-server=${mpv_socket} --idle=yes "$@" >/dev/null 2>&1 &
+	else
+          echo "loadfile $@ append-play" | socat - "${mpv_socket}"
+	fi
+	;;
+esac

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+read -r _ytdl_pref _is_audio_only _is_detach _video_pref _audio_pref url_handler_opts _
+
+ytfzf_video_json_file="${YTFZF_VIDEO_JSON_FILE}"
+
+playlist_name="${_PLAYLIST_NAME}"
+
+for url in "$@"; do
+    jq -r --arg url "$url" '.[]|select(.url==$url)' < "$ytfzf_video_json_file"
+done | jq -s '.' >> "$playlist_name"
+
+printf "%s\n" "$@" "has been added to $playlist_name"

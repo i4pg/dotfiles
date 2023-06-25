@@ -1,0 +1,21 @@
+#!/bin/sh
+
+
+interface_sxiv () {
+    command_exists "sxiv" || die 3 "sxiv is required for this menu\n"
+    video_json_file=$1
+    selected_id_file=$2
+    curl_config_file="${session_temp_dir}/curl_config"
+    jq -r '.[] | select(.thumbs!=null)|"
+	    url = \"\(.thumbs)\"
+	    output = \"'"$thumb_dir"'/\(.title)-\(.ID).jpg\""' < "$video_json_file" > "$curl_config_file"
+    curl -Z -K "$curl_config_file"
+    ids="$(sxiv -to "$thumb_dir")"
+    while read -r id; do
+	id="${id##*-}"
+	id="${id%.*}"
+	jq -r '.[]|select(.ID=="'"${id}"'").url' < "$video_json_file" >> "$selected_id_file"
+    done <<-EOF
+$ids
+EOF
+}

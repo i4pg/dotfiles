@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+
+_supports_echo_e () {
+    _test_against="$EOT"
+    #if this is true, echo printed the correct char
+    [ "$(echo -e "\x3")" = "$_test_against" ]
+}
+
+scrape_ani_category () {
+    _supports_echo_e || die 1 "Your shell does not support echo -e\n"
+    search="$1"
+    output_json_file="$2"
+    base_url='https://animixplay.to'
+    #This pipeline is mostly a copy paste from https://github.com/pystardust/ani-cli
+    #this pipeline does the following
+    #1: send request to the url with the search
+    #2: does some webscraping to get a list of links to gogohd.net
+    #3: lastly uses sed to prepend https: to the front of each link
+    #4: writes the whole thing to ${session_cache_dir}/ani-category-episodes.list
+    _get_request "$base_url/v1/${search}" | sed -n "s_.*epslistplace.*>\(.*\)</div>_\1_p" | tr ',' '\n' | sed -e '/extra/d' -e '/PV/d' | sed -n 's_".*":"\(.*\)".*_\1_p' | sed 's/\(.*\)/https:\1/' > "${session_cache_dir}/ani-category-episodes.list"
+    json="["
+    while read -r url; do
+        id="$(printf "%s" "$url" | sed -n 's/.*title=\([^&]\+\).*/\1/p')"
+        #this replaces all percents with \\x so that printf can convert them to real values
+        title="$(echo -e "$(printf "%s" "$id" | sed 'y/+/-/; s/%/\\x/g')")"
+        json=''"${json}"'{"ID": "'"$title"'", "title": "'"$title"'", "url": "'"$url"'", "scraper": "ani-category", "action": "scrape type=ani-gogohd-link search='"$url"'"},'
+    done < "${session_cache_dir}/ani-category-episodes.list"
+    json="${json%,}]"
+    printf "%s\n" "$json" >> "$output_json_file"
+}
