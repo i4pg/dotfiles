@@ -95,11 +95,6 @@ exec_always {
     gsettings set $gnome-schema font-name 'FiraCode Nerd Font Regular 11'
 }
 
-input "type:keyboard" {           
-    xkb_layout us
-    xkb_options caps:escape
-}
-
 # target                 title     bg    text   indicator  border
 client.focused           $pink     $base $text  $rosewater $pink
 client.focused_inactive  $mauve    $base $text  $rosewater $mauve
@@ -124,12 +119,17 @@ exec swayidle -w \
 #---------------------#
     # You can get the names of your inputs by running: swaymsg -t get_inputs
     # Read `man 5 sway-input` for more information about this section.
-    input "1739:52781:MSFT0001:01_06CB:CE2D_Touchpad" {
+    input "2:7:SynPS/2_Synaptics_TouchPad" {
            dwt enabled
            tap enabled
            natural_scroll enabled
            middle_emulation enabled
        }
+
+    input "type:keyboard" {           
+        xkb_layout us
+        xkb_options caps:escape
+    }
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
