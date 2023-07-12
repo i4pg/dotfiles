@@ -382,6 +382,10 @@ lvim.plugins = {
     run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
   },
   { "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } },
+  {
+    'phpactor/phpactor',
+    run = "'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'"
+  }
 }
 
 
