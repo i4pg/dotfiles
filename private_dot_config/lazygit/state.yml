@@ -1,6 +1,6 @@
 lastupdatecheck: 0
 recentrepos:
-- /home/iwxi/.local/share/chezmoi
+- $HOME/.local/share/chezmoi
 startuppopupversion: 5
 customcommandshistory: []
 hidecommandlog: false
