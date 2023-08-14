@@ -83,7 +83,7 @@
   "disk": {
     "interval": 30,
     "format": " {used}",
-    "path": "XDG_HOME",
+    "path": "XDG_CONFIG_HOME/..",
     "tooltip": true,
     "tooltip-format": "{used}/{total} => {path} {percentage_used}%",
   },
