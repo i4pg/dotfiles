@@ -1,7 +1,6 @@
-# include "$HOME/.cache/wal/colors-sway"
 include catppuccin-mocha
 
-xwayland enable
+xwayland disable
 
 font pango: FireCode Nerd Font Regular 4px
 
@@ -16,27 +15,25 @@ smart_borders on
 # assign 		[class="Spotify"] 		    3
 
 set $mod Mod4
-set $term kitty
-set $menu wofi --show drun
-set $browser brave --ozone-platform=wayland
-set $file-manager kitty fm
 set $left  h
 set $down  j
 set $up    k
 set $right l
-
-bindsym $mod+Return exec $term
-bindsym $mod+Shift+Return exec kitty --class="termfloat"
-bindsym Mod4+Shift+e exec bemoji
+set $term kitty
+set $menu wofi --show drun -I
+set $browser brave --ozone-platform=wayland
+set $file-manager kitty fm
 
 bindsym $mod+d exec $menu
 bindsym $mod+w exec $browser
 bindsym $mod+r exec $file-manager
+bindsym $mod+Return exec $term
+bindsym $mod+Shift+Return exec kitty --class="termfloat"
+bindsym $mod+` exec bemoji
 
 bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  save area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
 bindsym $mod+bracketright exec --no-startup-id   grimshot --notify  copy area 
 bindsym $mod+a exec --no-startup-id             ~/.config/sway/grimshot_watermark.sh
-bindsym $mod+Backspace exec ~/.config/wofi/power_menu.sh
 # bindsym $mod+Shift+x exec --no-startup-id        ~/.config/sway/swaylock.sh
 
 bindsym $mod+Shift+r reload
@@ -60,19 +57,18 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 output * adaptive_sync on
-#   
+
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
 
-
-for_window [app_id="keepassxc"]                  floating enable
 for_window [app_id="mpv"]                        floating enable 
 for_window [app_id="mpv"]                        resize set height 540
 for_window [app_id="mpv"]                        resize set width 960
+for_window [app_id="keepassxc"]                  floating enable
 
 focus_follows_mouse yes
 
-exec_always  --no-startup-id  cava -p ~/.config/cava/config1 | sed -u 's/;//g;s/0/▁/g;s/1/▂/g;s/2/▃/g;s/3/▄/g;s/4/▅/g;s/5/▆/g;s/6/▇/g;s/7/█/g;' &
+# exec_always  --no-startup-id  cava -p ~/.config/cava/config1 | sed -u 's/;//g;s/0/▁/g;s/1/▂/g;s/2/▃/g;s/3/▄/g;s/4/▅/g;s/5/▆/g;s/6/▇/g;s/7/█/g;' &
 exec dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus &
 exec mako
 exec_always  --no-startup-id  swww init &
@@ -81,19 +77,17 @@ exec  --no-startup-id  fcitx5 -d
 exec_always  --no-startup-id  nm-applet --indicator &
 exec_always  --no-startup-id  syncthing &
 exec_always  --no-startup-id  autotiling-rs &
-# exec  --no-startup-id  wal --theme ~/kanagawa.json
-# exec  --no-startup-id  dwall -p -s mojaveHD
 exec  --no-startup-id  redshift -l 25.348766:55.405403 &
 exec_always  --no-startup-id  ~/.config/waybar/launch_waybar.sh &
 
-set $gnome-schema org.gnome.desktop.interface
-seat seat0 xcursor_theme Catppuccin-Mocha-Light-Cursors
-exec_always {
-    gsettings set $gnome-schema gtk-theme 'Catppuccin-Mocha-Standard-Rosewater-Dark'
-    gsettings set $gnome-schema icon-theme 'Papirus-Dark'
-    gsettings set $gnome-schema cursor-theme 'Catppuccin-Mocha-Light-Cursors'
-    gsettings set $gnome-schema font-name 'FiraCode Nerd Font Regular 11'
-}
+# set $gnome-schema org.gnome.desktop.interface
+# seat seat0 xcursor_theme Catppuccin-Mocha-Light-Cursors
+# exec_always {
+#     gsettings set $gnome-schema gtk-theme 'Catppuccin-Mocha-Standard-Rosewater-Dark'
+#     gsettings set $gnome-schema icon-theme 'Papirus-Dark'
+#     gsettings set $gnome-schema cursor-theme 'Catppuccin-Mocha-Light-Cursors'
+#     gsettings set $gnome-schema font-name 'FiraCode Nerd Font Regular 11'
+# }
 
 # target                 title     bg    text   indicator  border
 client.focused           $pink     $base $text  $rosewater $pink
@@ -104,8 +98,7 @@ client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
 # PROTIP: You can also dynamically set dmenu's colors this way:
-bindsym $mod+v exec dmenu_run -nb "$foreground" -nf "$background" -sb "$background" -sf "$foreground"
-
+bindsym $mod+v exec dmenu_run -nb "$rosewater" -nf "$base" -sb "$base" -sf "$rosewater"
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
