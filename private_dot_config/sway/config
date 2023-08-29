@@ -29,7 +29,7 @@ bindsym $mod+w exec $browser
 bindsym $mod+r exec $file-manager
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+Return exec kitty --class="termfloat"
-bindsym $mod+` exec bemoji
+bindsym $mod+Shift+e exec bemoji
 
 bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  save area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
 bindsym $mod+bracketright exec --no-startup-id   grimshot --notify  copy area 
