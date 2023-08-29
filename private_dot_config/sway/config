@@ -81,7 +81,7 @@ exec  --no-startup-id  redshift -l 25.348766:55.405403 &
 exec_always  --no-startup-id  ~/.config/waybar/launch_waybar.sh &
 
 # set $gnome-schema org.gnome.desktop.interface
-# seat seat0 xcursor_theme Catppuccin-Mocha-Light-Cursors
+seat seat0 xcursor_theme Catppuccin-Mocha-Dark-Cursors
 # exec_always {
 #     gsettings set $gnome-schema gtk-theme 'Catppuccin-Mocha-Standard-Rosewater-Dark'
 #     gsettings set $gnome-schema icon-theme 'Papirus-Dark'
