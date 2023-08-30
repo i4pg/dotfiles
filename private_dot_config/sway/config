@@ -34,7 +34,7 @@ bindsym $mod+Shift+e exec bemoji
 bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  save area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
 bindsym $mod+bracketright exec --no-startup-id   grimshot --notify  copy area 
 bindsym $mod+a exec --no-startup-id             ~/.config/sway/grimshot_watermark.sh
-# bindsym $mod+Shift+x exec --no-startup-id        ~/.config/sway/swaylock.sh
+bindsym $mod+Shift+x exec --no-startup-id        swaylock --screenshots --clock --indicator  --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0
 
 bindsym $mod+Shift+r reload
 bindsym $mod+q kill
@@ -71,8 +71,7 @@ focus_follows_mouse yes
 # exec_always  --no-startup-id  cava -p ~/.config/cava/config1 | sed -u 's/;//g;s/0/▁/g;s/1/▂/g;s/2/▃/g;s/3/▄/g;s/4/▅/g;s/5/▆/g;s/6/▇/g;s/7/█/g;' &
 exec dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus &
 exec mako
-exec_always  --no-startup-id  swww init &
-exec_always  --no-startup-id  swww img ~/Downloads/mocha-noise4-wallhaven-5gwmd3_3840x2160.png
+exec swaycons
 exec  --no-startup-id  fcitx5 -d
 exec_always  --no-startup-id  nm-applet --indicator &
 exec_always  --no-startup-id  syncthing &
@@ -106,7 +105,7 @@ bindsym $mod+v exec dmenu_run -nb "$rosewater" -nf "$base" -sb "$base" -sf "$ros
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec swayidle -w \
         timeout 1800 'systemctl suspend' \
-        before-sleep '~/.config/sway/swaylock.sh'
+        before-sleep 'swaylock --screenshots --clock --indicator  --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0'
 
 #---------------------#
 # Input configuration #
