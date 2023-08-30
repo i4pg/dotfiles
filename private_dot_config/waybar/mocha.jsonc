@@ -31,7 +31,7 @@
   ],
   "custom/launcher": {
     "format": "",
-    "on-click": "wofi --show drun",
+    "on-click": "wofi --show drun -I",
     "tooltip-format": "sudo pacman -Q linux",
     "tooltip": false,
   },
@@ -83,7 +83,7 @@
   "disk": {
     "interval": 30,
     "format": " {used}",
-    "path": "$HOME/",
+    "path": "~/",
     "tooltip": true,
     "tooltip-format": "{used}/{total} => {path} {percentage_used}%",
   },
@@ -172,7 +172,7 @@
   },
   "temperature": {
     "hwmon-path": "/sys/class/hwmon/hwmon4/temp2_input",
-    //"critical-threshold": 80,
+    "critical-threshold": 80,
     "tooltip": false,
     "format": " {temperatureC}°C"
   },
@@ -192,7 +192,7 @@
     "exec-if": "exit 0", // always run; consider advanced run conditions
     "exec-if": "checkupdates | wc -l > 0", // always run; consider advanced run conditions
     /* "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system */
-    "on-click": "kitty yay -Syu",
+    "on-click": "kitty yay",
     "signal": 8
   },
   "custom/scratchpad-indicator": {
