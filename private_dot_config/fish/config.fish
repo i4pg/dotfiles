@@ -244,7 +244,7 @@ alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
 # pacman and yay
-alias pacs='sudo pacman -Rns'                     # Remove packages
+alias pacr='sudo pacman -Rns'                     # Remove packages
 alias pacs='sudo pacman -S'                      # Install packages
 alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
 alias pacsyyu='sudo pacman -Syyu'                # Refresh pkglist & update standard pkgs
