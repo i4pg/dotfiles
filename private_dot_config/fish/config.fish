@@ -380,6 +380,9 @@ alias exiftool="exiv2"
 # Wayland platform
 alias code="code --ozone-platform=wayland"
 
+# Kitty image viewer
+alias icat="kitty +kitten icat"
+
 ### DTOS ###
 # Copy/paste all content of /etc/dtos over to home folder. A backup of config is created. (Be careful running this!)
 # alias dtoscopy='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.config-backup-(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/dtos/* ~'
