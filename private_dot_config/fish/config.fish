@@ -19,10 +19,9 @@ status --is-interactive; and rbenv init - fish | source # rbenv
 
 ### EXPORT ###
 set fish_greeting                                 # Supresses fish's intro message
-# set TERM "xterm-256color"                         # Sets the terminal type
-set EDITOR "lvim"                 # $EDITOR use Emacs in terminal
-set VISUAL "lvim"              # $VISUAL use Emacs in GUI mode
-set BROWSER "firefox"
+set EDITOR "lvim"                 
+set VISUAL "lvim"              
+set BROWSER "brave"           
 
 ### SET MANPAGER
 ### Uncomment only one of these!
@@ -245,7 +244,8 @@ alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
 # pacman and yay
-alias pacs='sudo pacman -S'                      # Install a packages
+alias pacs='sudo pacman -Rns'                     # Remove packages
+alias pacs='sudo pacman -S'                      # Install packages
 alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
 alias pacsyyu='sudo pacman -Syyu'                # Refresh pkglist & update standard pkgs
 alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
@@ -377,11 +377,14 @@ alias chezapply="chezmoi apply -v"
 # ExifTool
 alias exiftool="exiv2"
 
+# Wayland platform
+alias code="code --ozone-platform=wayland"
+
 ### DTOS ###
 # Copy/paste all content of /etc/dtos over to home folder. A backup of config is created. (Be careful running this!)
-alias dtoscopy='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.config-backup-(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/dtos/* ~'
+# alias dtoscopy='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.config-backup-(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/dtos/* ~'
 # Backup contents of /etc/dtos to a backup folder in $HOME.
-alias dtosbackup='cp -Rf /etc/dtos ~/dtos-backup-(date +%Y.%m.%d-%H.%M.%S)'
+# alias dtosbackup='cp -Rf /etc/dtos ~/dtos-backup-(date +%Y.%m.%d-%H.%M.%S)'
 
 ### RANDOM COLOR SCRIPT ###
 # Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts
