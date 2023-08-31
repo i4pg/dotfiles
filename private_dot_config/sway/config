@@ -24,6 +24,7 @@ set $menu wofi --show drun -I
 set $browser firefox
 set $file-manager kitty fm
 
+bindsym $mod+x exec keepassxc
 bindsym $mod+d exec $menu
 bindsym $mod+w exec $browser
 bindsym $mod+r exec $file-manager
