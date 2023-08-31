@@ -21,7 +21,7 @@ set $up    k
 set $right l
 set $term kitty
 set $menu wofi --show drun -I
-set $browser brave --ozone-platform=wayland
+set $browser firefox
 set $file-manager kitty fm
 
 bindsym $mod+d exec $menu
