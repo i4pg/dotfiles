@@ -22,6 +22,7 @@ set fish_greeting                                 # Supresses fish's intro messa
 set EDITOR "lvim"                 
 set VISUAL "lvim"              
 set BROWSER "brave"           
+set XDG_CURRENT_DESKTOP "sway"
 
 ### SET MANPAGER
 ### Uncomment only one of these!
