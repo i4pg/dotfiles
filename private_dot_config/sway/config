@@ -1,6 +1,6 @@
 include catppuccin-mocha
 
-xwayland disabled
+# xwayland disabled
 
 font pango:FireCode Nerd Font Regular 4px
 
