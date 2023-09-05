@@ -31,7 +31,7 @@
   ],
   "custom/launcher": {
     "format": "",
-    "on-click": "wofi --show drun -I",
+    "on-click": "wofi --show drun -I -a",
     "tooltip-format": "sudo pacman -Q linux",
     "tooltip": false,
   },
