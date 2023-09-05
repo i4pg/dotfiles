@@ -20,7 +20,7 @@ set $down  j
 set $up    k
 set $right l
 set $term kitty
-set $menu wofi --show drun -I
+set $menu wofi --show drun -I -a
 set $browser firefox
 set $file-manager kitty fm
 
