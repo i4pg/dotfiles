@@ -247,6 +247,7 @@ alias l.='exa -a | egrep "^\."'
 # pacman and yay
 alias pacr='yay -Rns'                     # Remove packages
 alias pacs='sudo pacman -S'                      # Install packages
+alias pacss='sudo pacman -Ss'                      # Search packages
 alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
 alias pacsyyu='sudo pacman -Syyu'                # Refresh pkglist & update standard pkgs
 alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
