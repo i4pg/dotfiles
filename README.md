@@ -1,6 +1,6 @@
 <h3 align="center">
 	<img src="assets/1544x1544_circle.png" width="100" alt="Logo"/><br/>
-    :space_invader: Aesthetic SwayWM Catppuccin Environment
+    :space_invader: Aesthetic Sway WM Catppuccin Environment
 </h3>
 
 <p align="center">
