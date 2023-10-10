@@ -21,7 +21,7 @@ set $up    k
 set $right l
 set $term kitty
 set $menu wofi --show drun -I -a
-set $browser firefox
+set $browser flatpak run org.mozilla.firefox
 set $file-manager kitty fm
 
 bindsym $mod+x exec keepassxc
