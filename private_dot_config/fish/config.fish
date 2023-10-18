@@ -24,7 +24,7 @@ set BROWSER "brave"
 set XDG_CURRENT_DESKTOP "sway"
 set GTK_IM_MODULE "fcitx"
 set QT_IM_MODULE "fcitx"
-set XMODIFIERS=@im "fcitx"
+# set XMODIFIERS=@im "fcitx"
 set GLFW_IM_MODULE "ibus"
 
 ### SET MANPAGER
