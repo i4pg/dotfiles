@@ -192,7 +192,7 @@
     "exec-if": "exit 0", // always run; consider advanced run conditions
     "exec-if": "checkupdates | wc -l > 0", // always run; consider advanced run conditions
     /* "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system */
-    "on-click": "kitty yay && flatpak update && gem update --system && gem update && rustup update && sudo npm update -g npm",
+    "on-click": "kitty yay && kitty flatpak update && kitty gem update --system && kitty gem update && kitty rustup update && kitty  sudo npm update -g npm",
     "signal": 8
   },
   "custom/scratchpad-indicator": {
