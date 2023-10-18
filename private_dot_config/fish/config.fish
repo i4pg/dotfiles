@@ -11,7 +11,6 @@ set -Ux fish_user_paths $FLYCTL_INSTALL/bin:$PATH
 set -Ux EDITOR lvim
 set -Ux JEKYLL_EDITOR lvim
 set -Ux FLYCTL_INSTALL $HOME/.fly
-
 # source ~/.config/fish/themes/kanagawa.conf #
 
 
@@ -23,6 +22,9 @@ set EDITOR "lvim"
 set VISUAL "lvim"              
 set BROWSER "brave"           
 set XDG_CURRENT_DESKTOP "sway"
+set GTK_IM_MODULE "fcitx"
+set QT_IM_MODULE "fcitx"
+set XMODIFIERS=@im "fcitx"
 
 ### SET MANPAGER
 ### Uncomment only one of these!
