@@ -72,6 +72,7 @@ focus_follows_mouse yes
 exec dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus &
 exec mako
 exec swaycons
+exec fcitx5
 exec_always  --no-startup-id  swaybg -i ~/Downloads/mocha-noise4-wallhaven-5gwmd3_3840x2160.png
 exec_always  --no-startup-id  nm-applet --indicator &
 exec_always  --no-startup-id  syncthing &
